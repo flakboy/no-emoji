@@ -2,21 +2,32 @@
   "name": "Remember, no emoji",
   "version": "2.137.69",
   "manifest_version": 2,
+  "description": "Usuwańsko emotek",
   "content_scripts": [
     {
-      "matches": ["https://*.facebook.com/*","http://*.facebook.com/*"],
-	  "run_at": "document_idle",
-	  "js": ["remover.js"]
+      "matches": [
+        "https://*.facebook.com/*",
+        "http://*.facebook.com/*"
+      ],
+      "run_at": "document_idle",
+      "js": [
+        "remover.js",
+        "config.js"
+      ]
     }
   ],
   "browser_action": {
-    "default_icon": "xd.png"
+    "default_icon": "resources/xd.png",
+    "default_title": "Remember, no emoji",
+    "default_popup": "dialog.html"
   },
   "permissions": [
-      "activeTab"
+    "activeTab",
+    "storage"
   ],
-  "icons": { "16": "xd.png",
-           "48": "xd.png",
-          "128": "xd.png"
+  "icons": {
+    "16": "resources/xd.png",
+    "48": "resources/xd.png",
+    "128": "resources/xd.png"
   }
 }
