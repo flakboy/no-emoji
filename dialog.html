@@ -6,11 +6,48 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Plugin configurator</title>
+	<style>
+		form,
+		fieldset {
+			border: none;
+		}
+
+		input[type=url] {
+			display: block;
+			font-size: 12px;
+			width: 250px;
+		}
+	</style>
 </head>
 
 <body>
-	<h2>Lorem ipsum</h2>
-	<span id="value"></span>
+	<h2>Preferencje</h2>
+	<form id="settings" autocomplete="off">
+
+		<fieldset>
+			<h3>Wybierz typ źródła</h3>
+			<label for="url_check">Adres URL</label>
+			<input type="radio" name="img_src" id="url_check" value="url" class="settings__file" data-field="url"
+				checked>
+			<br />
+			<!--
+				<label for="fs_check">Plik lokalny</label>
+				<input type="radio" name="img_src" id="fs_check" value="fs" class="settings__file" data-field="fs">
+			-->
+		</fieldset>
+
+		<fieldset>
+			<h3>Adres URL grafiki</h3>
+			<label for="url">Adres URL</label>
+			<input id="url" type="url" class="settings__address">
+			<!--
+				<label for="fs">Ścieżka pliku na dysku</label>
+				<input id="fs" type="url" class="settings__address">
+			-->
+		</fieldset>
+
+		<input type="submit">
+	</form>
 	<script src="config.js">
 	</script>
 </body>
