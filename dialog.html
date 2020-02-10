@@ -14,7 +14,7 @@
 
 		input[type=url] {
 			display: block;
-			font-size: 12px;
+			font-size: 14px;
 			width: 250px;
 		}
 	</style>
@@ -25,15 +25,10 @@
 	<form id="settings" autocomplete="off">
 
 		<fieldset>
-			<h3>Wybierz typ źródła</h3>
-			<label for="url_check">Adres URL</label>
-			<input type="radio" name="img_src" id="url_check" value="url" class="settings__file" data-field="url"
-				checked>
-			<br />
-			<!--
-				<label for="fs_check">Plik lokalny</label>
-				<input type="radio" name="img_src" id="fs_check" value="fs" class="settings__file" data-field="fs">
-			-->
+			<select name="img_src" id="img_src">
+				<option value="url">Zastąp grafiką (url)</option>
+				<option value="hide">Ukryj emoji</option>
+			</select>
 		</fieldset>
 
 		<fieldset>

@@ -1,34 +1,57 @@
-//chrome.storage.local.set({ xd: "xid" })
-/*
-chrome.storage.local.get(["xd"], function (result) {
-	document.getElementById("value").innerText = result.xd
-})
-*/
+var imgSrc = document.getElementById("img_src");
+var url = document.getElementById("url")
 
-img_srcs = document.getElementsByClassName("settings__file")
-
-for (let src of img_srcs) {
-	src.onchange = () => {
-		var fields = document.getElementsByClassName("settings__address")
-		for (let field of fields) {
-			field.disabled = true
+//Pierwsza linia ustawia wartość domyślną do pierwszego użycia
+chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
+	actionType = data.action
+	for (option of imgSrc.children) {
+		if (option.value == actionType) {
+			option.selected = true;
 		}
-		document.getElementById(src.dataset.field).disabled = false
 	}
-}
+	switch (actionType) {
+		case "hide":
+			document.getElementById("url").disabled = true;
+			break;
+		case "url":
+			document.getElementById("url").disabled = false;
+	}
 
-form = document.getElementById("settings")
+	alert(data.imgUrl)
+})
+
+imgSrc.addEventListener("change", () => {
+	var selected = imgSrc.value;
+	options = imgSrc.children;
+	switch (selected) {
+		case "hide":
+			document.getElementById("url").disabled = true;
+			actionType = "hide"
+			break;
+		case "url":
+			document.getElementById("url").disabled = false;
+			actionType = "url";
+			break;
+	}
+})
+
+form = document.getElementById("settings");
+
 
 form.onsubmit = () => {
-	var url = document.getElementById("url")
-
-	if (url.value.length) {
-		chrome.storage.local.set({ xd: url.value })
+	if (!url.disabled) {
+		if (url.value.length) {
+			chrome.storage.local.set({ action: actionType });
+			chrome.storage.local.set({ imgUrl: url.value });
+		} else {
+			alert("Adres URL grafiki nie może być pusty");
+			return false;
+		}
+	} else {
+		chrome.storage.local.set({ action: actionType });
 	}
 
-	chrome.storage.local.get(["xd"], function (result) {
-		//alert(result.xd)
-		alert("Pomyślnie zapisano ustawienia")
-	})
-	return false
+	/*chrome.storage.local.get(["xd"], function (result) {
+		alert("Pomyślnie zapisano ustawienia:" + result.xd)
+	})*/
 }

@@ -17,7 +17,8 @@ const censoredBg = [
 
 const spans = ["_6qdm", "_3gl1", "_21wj", "_1ift", "_1ifu", "_5zft", "_19_s"]
 
-chrome.storage.local.get(["xd"], result => {
+//chrome.storage.local.get(["xd"], result => {
+chrome.storage.local.get(["imgUrl"], result => {
 	filterImg = result.xd
 })
 
