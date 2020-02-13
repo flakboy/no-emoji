@@ -1,14 +1,14 @@
-var imgSrc = document.getElementById("img_src");
+var actionSelect = document.getElementById("action");
 var url = document.getElementById("url")
 
-//Pierwsza linia ustawia wartość domyślną do pierwszego użycia
 chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
 	actionType = data.action
-	for (option of imgSrc.children) {
+	for (option of actionSelect.children) {
 		if (option.value == actionType) {
 			option.selected = true;
 		}
 	}
+
 	switch (actionType) {
 		case "hide":
 			document.getElementById("url").disabled = true;
@@ -17,12 +17,14 @@ chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
 			document.getElementById("url").disabled = false;
 	}
 
-	alert(data.imgUrl)
+	//console.log(data.imgUrl)
 })
 
-imgSrc.addEventListener("change", () => {
-	var selected = imgSrc.value;
-	options = imgSrc.children;
+actionSelect.addEventListener("change", () => {
+	var selected = actionSelect.value;
+	var options = actionSelect.children;
+
+
 	switch (selected) {
 		case "hide":
 			document.getElementById("url").disabled = true;
@@ -37,14 +39,13 @@ imgSrc.addEventListener("change", () => {
 
 form = document.getElementById("settings");
 
-
 form.onsubmit = () => {
 	if (!url.disabled) {
 		if (url.value.length) {
 			chrome.storage.local.set({ action: actionType });
 			chrome.storage.local.set({ imgUrl: url.value });
 		} else {
-			alert("Adres URL grafiki nie może być pusty");
+			alert('Pole "Adres URL" nie może być puste');
 			return false;
 		}
 	} else {
