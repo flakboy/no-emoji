@@ -1,8 +1,43 @@
-var actionSelect = document.getElementById("action");
-var url = document.getElementById("url")
+let actionSelect = document.getElementById("action");
+let url = document.getElementById("url")
+
+xhr = new XMLHttpRequest();
+xhr.addEventListener("readystatechange", () => {
+	if (xhr.readyState === 4) {
+		let emojiInfo = JSON.parse(xhr.response)
+		console.log(emojiInfo)
+		let emojiTable = document.querySelector("#settings__filter > table");
+		console.time("start")
+		for (let [key, value] of Object.entries(emojiInfo)) {
+			let row = document.createElement("tr");
+			let emojiLabel = value.name;
+
+			let tdPreview = document.createElement("td");
+			tdPreview.appendChild(document.createTextNode(String.fromCodePoint(parseInt(key, 16))));
+			row.appendChild(tdPreview);
+
+			let tdName = document.createElement("td");
+			tdName.appendChild(document.createTextNode(emojiLabel));
+			row.appendChild(tdName);
+
+			let tdCheckbox = document.createElement("td");
+			let checkbox = document.createElement("input");
+			checkbox.type = "checkbox";
+			checkbox.name = emojiLabel;
+			tdCheckbox.appendChild(checkbox);
+			row.appendChild(tdCheckbox);
+
+			emojiTable.appendChild(row);
+		}
+		console.timeEnd("start")
+	}
+});
+xhr.open("GET", chrome.extension.getURL("/emoji_db.json"), true);
+xhr.send();
 
 chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
-	actionType = data.action
+	actionType = data.action;
+	url.value = data.imgUrl;
 	for (option of actionSelect.children) {
 		if (option.value == actionType) {
 			option.selected = true;
@@ -16,16 +51,13 @@ chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
 		case "url":
 			document.getElementById("url").disabled = false;
 	}
-
-	//console.log(data.imgUrl)
 })
 
 actionSelect.addEventListener("change", () => {
-	var selected = actionSelect.value;
-	var options = actionSelect.children;
+	let selectedValue = actionSelect.value;
+	let options = actionSelect.children;
 
-
-	switch (selected) {
+	switch (selectedValue) {
 		case "hide":
 			document.getElementById("url").disabled = true;
 			actionType = "hide"
@@ -37,9 +69,7 @@ actionSelect.addEventListener("change", () => {
 	}
 })
 
-form = document.getElementById("settings");
-
-form.onsubmit = () => {
+document.getElementById("settings__action").onsubmit = () => {
 	if (!url.disabled) {
 		if (url.value.length) {
 			chrome.storage.local.set({ action: actionType });

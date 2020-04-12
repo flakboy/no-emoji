@@ -7,6 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Plugin configurator</title>
 	<style>
+		body {
+			min-width: 800px;
+		}
+
 		form,
 		fieldset {
 			border: none;
@@ -22,8 +26,7 @@
 
 <body>
 	<h2>Preferencje</h2>
-	<form id="settings" autocomplete="off">
-
+	<form id="settings__action" autocomplete="off">
 		<fieldset>
 			<select name="action" id="action">
 				<option value="url">Zastąp grafiką (url)</option>
@@ -40,8 +43,12 @@
 				<input id="fs" type="url" class="settings__address">
 			-->
 		</fieldset>
-
 		<input type="submit">
+	</form>
+	<form id="settings__filter">
+		<table>
+		</table>
+		<!-- <input type="submit"> -->
 	</form>
 	<script src="config.js">
 	</script>

@@ -1,68 +1,47 @@
-const censoredSrc = [
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/te3/1.5/32/1f602.png",
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/t29/1.5/16/1f602.png",
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/ta/1.5/28/1f602.png",
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/t31/1.5/128/1f602.png",
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/t8a/1/32/1f602.png",
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/t6a/1/128/1f602.png",
-	"https://static.xx.fbcdn.net/images/emoji.php/v9/td0/1/16/1f602.png"
-];
-
-const censoredBg = [
-	'url("https://static.xx.fbcdn.net/images/emoji.php/v9/t29/1.5/16/1f602.png")',
-	'url("https://www.facebook.com/images/emoji.php/v9/tdc/1.5/16/1f60e.png")',
-	'url("https://www.facebook.com/images/emoji.php/v9/t29/1.5/16/1f602.png")',
-	'url("https://static.xx.fbcdn.net/images/emoji.php/v9/t8a/1/32/1f602.png")',
-	'url("https://static.xx.fbcdn.net/images/emoji.php/v9/te3/1.5/32/1f602.png")'
-];
-
-const spans = ["_6qdm", "_3gl1", "_21wj", "_1ift", "_1ifu", "_5zft", "_19_s"];
+const queries = ["img._1ift", "span._6qdm", "span._21wj"]
 
 chrome.storage.local.get({ action: "hide", imgUrl: "" }, result => {
 	settings = result;
 
-	MutationObserver = window.MutationObserver || window.WebKitMutationObserve
+	MutationObserver = window.MutationObserver || window.WebKitMutationObserver
 	monitor = new MutationObserver((mutations, observer) => {
-
-		var emoji = [];
-
-		for (spanClass of spans) {
-			toAdd = Array.prototype.slice.call(document.getElementsByClassName(spanClass));
-			emoji = emoji.concat(toAdd);
+		let emojis = [];
+		for (query of queries) {
+			queryResult = document.querySelectorAll(query);
+			emojis.push(...queryResult)
 		}
 
-		if (settings.action == "url") {
-			if (emoji.length > 0) {
-				for (span of emoji) {
-					if (span.tagName == "IMG") {
-						if (censoredSrc.includes(span.src)) {
-							span.src = settings.imgUrl;
-						}
-					} else if (censoredBg.includes(span.style.backgroundImage)) {
-						span.style.backgroundImage = 'url("' + settings.imgUrl + '")';
-						span.style.backgroundPosition = "center";
-						span.style.backgroundSize = "cover";
+		if (settings.action === "url") {
+			for (elem of emojis) {
+				if (elem.tagName === "IMG") {
+					let charUnicode = elem.src.split("/");
+					charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
+					if (elem.src.endsWith("1f602.png")) {
+						elem.src = settings.imgUrl;
 					}
+				} else if (elem.style.backgroundImage.indexOf("1f602.png") != -1) {
+					elem.style.backgroundImage = 'url("' + settings.imgUrl + '")';
+					elem.style.backgroundPosition = "center";
+					elem.style.backgroundSize = "100%";
 				}
 			}
-		} else if (settings.action == "hide") {
-			if (emoji.length > 0) {
-				for (span of emoji) {
-					if (span.tagName == "IMG") {
-						if (censoredSrc.includes(span.src)) {
-							span.style.display = "none";
-						}
-					} else if (censoredBg.includes(span.style.backgroundImage)) {
-						span.style.display = "none";
+		} else if (settings.action === "hide") {
+			for (elem of emojis) {
+				if (elem.tagName === "IMG") {
+					if (elem.src.endsWith("1f602.png")) {
+						elem.style.display = "none";
 					}
+				} else if (elem.style.backgroundImage.indexOf("1f602.png") != -1) {
+					elem.style.display = "none";
 				}
 			}
 		}
+
 	});
 
 	monitor.observe(document, {
 		subtree: true,
-		attributes: true,
+		// attributes: true,
 		childList: true
 	});
 })
