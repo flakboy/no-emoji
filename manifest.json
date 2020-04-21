@@ -1,6 +1,6 @@
 {
   "name": "Remember, no emoji",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "manifest_version": 2,
   "description": "Usuwańsko emotek",
   "content_scripts": [

@@ -3180,5 +3180,814 @@
 		"1f532": {
 			"name": "black square button"
 		}
+	},
+	"flags": {
+		"1f3c1": {
+			"name": "chequered flag"
+		},
+		"1f6a9": {
+			"name": "triangular flag"
+		},
+		"1f38c": {
+			"name": "crossed flags"
+		},
+		"1f3f4": {
+			"name": "black flag"
+		},
+		"1f3f3": {
+			"name": "white flag"
+		},
+		"1f3f3_fe0f_200d_1f308": {
+			"name": "rainbow flag"
+		},
+		"1f3f3_fe0f_200d_26a7_fe0f": {
+			"name": "transgender flag"
+		},
+		"1f3f4_200d_2620_fe0f": {
+			"name": "pirate flag"
+		},
+		"1f1e6_1f1e8": {
+			"name": "Ascension Island"
+		},
+		"1f1e6_1f1e9": {
+			"name": "Andorra"
+		},
+		"1f1e6_1f1ea": {
+			"name": "United Arab Emirates"
+		},
+		"1f1e6_1f1eb": {
+			"name": "Afghanistan"
+		},
+		"1f1e6_1f1ec": {
+			"name": "Antigua & Barbuda"
+		},
+		"1f1e6_1f1ee": {
+			"name": "Anguilla"
+		},
+		"1f1e6_1f1f1": {
+			"name": "Albania"
+		},
+		"1f1e6_1f1f2": {
+			"name": "Armenia"
+		},
+		"1f1e6_1f1f4": {
+			"name": "Angola"
+		},
+		"1f1e6_1f1f6": {
+			"name": "Antarctica"
+		},
+		"1f1e6_1f1f7": {
+			"name": "Argentina"
+		},
+		"1f1e6_1f1f8": {
+			"name": "American Samoa"
+		},
+		"1f1e6_1f1f9": {
+			"name": "Austria"
+		},
+		"1f1e6_1f1fa": {
+			"name": "Australia"
+		},
+		"1f1e6_1f1fc": {
+			"name": "Aruba"
+		},
+		"1f1e6_1f1fd": {
+			"name": "Åland Islands"
+		},
+		"1f1e6_1f1ff": {
+			"name": "Azerbaijan"
+		},
+		"1f1e7_1f1e6": {
+			"name": "Bosnia & Herzegovina"
+		},
+		"1f1e7_1f1e7": {
+			"name": "Barbados"
+		},
+		"1f1e7_1f1e9": {
+			"name": "Bangladesh"
+		},
+		"1f1e7_1f1ea": {
+			"name": "Belgium"
+		},
+		"1f1e7_1f1eb": {
+			"name": "Burkina Faso"
+		},
+		"1f1e7_1f1ec": {
+			"name": "Bulgaria"
+		},
+		"1f1e7_1f1ed": {
+			"name": "Bahrain"
+		},
+		"1f1e7_1f1ee": {
+			"name": "Burundi"
+		},
+		"1f1e7_1f1ef": {
+			"name": "Benin"
+		},
+		"1f1e7_1f1f1": {
+			"name": "St. Barthélemy"
+		},
+		"1f1e7_1f1f2": {
+			"name": "Bermuda"
+		},
+		"1f1e7_1f1f3": {
+			"name": "Brunei"
+		},
+		"1f1e7_1f1f4": {
+			"name": "Bolivia"
+		},
+		"1f1e7_1f1f6": {
+			"name": "Caribbean Netherlands"
+		},
+		"1f1e7_1f1f7": {
+			"name": "Brazil"
+		},
+		"1f1e7_1f1f8": {
+			"name": "Bahamas"
+		},
+		"1f1e7_1f1f9": {
+			"name": "Bhutan"
+		},
+		"1f1e7_1f1fb": {
+			"name": "Bouvet Island"
+		},
+		"1f1e7_1f1fc": {
+			"name": "Botswana"
+		},
+		"1f1e7_1f1fe": {
+			"name": "Belarus"
+		},
+		"1f1e7_1f1ff": {
+			"name": "Belize"
+		},
+		"1f1e8_1f1e6": {
+			"name": "Canada"
+		},
+		"1f1e8_1f1e8": {
+			"name": "Cocos (Keeling) Islands"
+		},
+		"1f1e8_1f1e9": {
+			"name": "Congo - Kinshasa"
+		},
+		"1f1e8_1f1eb": {
+			"name": "Central African Republic"
+		},
+		"1f1e8_1f1ec": {
+			"name": "Congo - Brazzaville"
+		},
+		"1f1e8_1f1ed": {
+			"name": "Switzerland"
+		},
+		"1f1e8_1f1ee": {
+			"name": "Côte d’Ivoire"
+		},
+		"1f1e8_1f1f0": {
+			"name": "Cook Islands"
+		},
+		"1f1e8_1f1f1": {
+			"name": "Chile"
+		},
+		"1f1e8_1f1f2": {
+			"name": "Cameroon"
+		},
+		"1f1e8_1f1f3": {
+			"name": "China"
+		},
+		"1f1e8_1f1f4": {
+			"name": "Colombia"
+		},
+		"1f1e8_1f1f5": {
+			"name": "Clipperton Island"
+		},
+		"1f1e8_1f1f7": {
+			"name": "Costa Rica"
+		},
+		"1f1e8_1f1fa": {
+			"name": "Cuba"
+		},
+		"1f1e8_1f1fb": {
+			"name": "Cape Verde"
+		},
+		"1f1e8_1f1fc": {
+			"name": "Curaçao"
+		},
+		"1f1e8_1f1fd": {
+			"name": "Christmas Island"
+		},
+		"1f1e8_1f1fe": {
+			"name": "Cyprus"
+		},
+		"1f1e8_1f1ff": {
+			"name": "Czechia"
+		},
+		"1f1e9_1f1ea": {
+			"name": "Germany"
+		},
+		"1f1e9_1f1ec": {
+			"name": "Diego Garcia"
+		},
+		"1f1e9_1f1ef": {
+			"name": "Djibouti"
+		},
+		"1f1e9_1f1f0": {
+			"name": "Denmark"
+		},
+		"1f1e9_1f1f2": {
+			"name": "Dominica"
+		},
+		"1f1e9_1f1f4": {
+			"name": "Dominican Republic"
+		},
+		"1f1e9_1f1ff": {
+			"name": "Algeria"
+		},
+		"1f1ea_1f1e6": {
+			"name": "Ceuta & Melilla"
+		},
+		"1f1ea_1f1e8": {
+			"name": "Ecuador"
+		},
+		"1f1ea_1f1ea": {
+			"name": "Estonia"
+		},
+		"1f1ea_1f1ec": {
+			"name": "Egypt"
+		},
+		"1f1ea_1f1ed": {
+			"name": "Western Sahara"
+		},
+		"1f1ea_1f1f7": {
+			"name": "Eritrea"
+		},
+		"1f1ea_1f1f8": {
+			"name": "Spain"
+		},
+		"1f1ea_1f1f9": {
+			"name": "Ethiopia"
+		},
+		"1f1ea_1f1fa": {
+			"name": "European Union"
+		},
+		"1f1eb_1f1ee": {
+			"name": "Finland"
+		},
+		"1f1eb_1f1ef": {
+			"name": "Fiji"
+		},
+		"1f1eb_1f1f0": {
+			"name": "Falkland Islands"
+		},
+		"1f1eb_1f1f2": {
+			"name": "Micronesia"
+		},
+		"1f1eb_1f1f4": {
+			"name": "Faroe Islands"
+		},
+		"1f1eb_1f1f7": {
+			"name": "France"
+		},
+		"1f1ec_1f1e6": {
+			"name": "Gabon"
+		},
+		"1f1ec_1f1e7": {
+			"name": "United Kingdom"
+		},
+		"1f1ec_1f1e9": {
+			"name": "Grenada"
+		},
+		"1f1ec_1f1ea": {
+			"name": "Georgia"
+		},
+		"1f1ec_1f1eb": {
+			"name": "French Guiana"
+		},
+		"1f1ec_1f1ec": {
+			"name": "Guernsey"
+		},
+		"1f1ec_1f1ed": {
+			"name": "Ghana"
+		},
+		"1f1ec_1f1ee": {
+			"name": "Gibraltar"
+		},
+		"1f1ec_1f1f1": {
+			"name": "Greenland"
+		},
+		"1f1ec_1f1f2": {
+			"name": "Gambia"
+		},
+		"1f1ec_1f1f3": {
+			"name": "Guinea"
+		},
+		"1f1ec_1f1f5": {
+			"name": "Guadeloupe"
+		},
+		"1f1ec_1f1f6": {
+			"name": "Equatorial Guinea"
+		},
+		"1f1ec_1f1f7": {
+			"name": "Greece"
+		},
+		"1f1ec_1f1f8": {
+			"name": "South Georgia & South Sandwich Islands"
+		},
+		"1f1ec_1f1f9": {
+			"name": "Guatemala"
+		},
+		"1f1ec_1f1fa": {
+			"name": "Guam"
+		},
+		"1f1ec_1f1fc": {
+			"name": "Guinea-Bissau"
+		},
+		"1f1ec_1f1fe": {
+			"name": "Guyana"
+		},
+		"1f1ed_1f1f0": {
+			"name": "Hong Kong SAR China"
+		},
+		"1f1ed_1f1f2": {
+			"name": "Heard & McDonald Islands"
+		},
+		"1f1ed_1f1f3": {
+			"name": "Honduras"
+		},
+		"1f1ed_1f1f7": {
+			"name": "Croatia"
+		},
+		"1f1ed_1f1f9": {
+			"name": "Haiti"
+		},
+		"1f1ed_1f1fa": {
+			"name": "Hungary"
+		},
+		"1f1ee_1f1e8": {
+			"name": "Canary Islands"
+		},
+		"1f1ee_1f1e9": {
+			"name": "Indonesia"
+		},
+		"1f1ee_1f1ea": {
+			"name": "Ireland"
+		},
+		"1f1ee_1f1f1": {
+			"name": "Israel"
+		},
+		"1f1ee_1f1f2": {
+			"name": "Isle of Man"
+		},
+		"1f1ee_1f1f3": {
+			"name": "India"
+		},
+		"1f1ee_1f1f4": {
+			"name": "British Indian Ocean Territory"
+		},
+		"1f1ee_1f1f6": {
+			"name": "Iraq"
+		},
+		"1f1ee_1f1f7": {
+			"name": "Iran"
+		},
+		"1f1ee_1f1f8": {
+			"name": "Iceland"
+		},
+		"1f1ee_1f1f9": {
+			"name": "Italy"
+		},
+		"1f1ef_1f1ea": {
+			"name": "Jersey"
+		},
+		"1f1ef_1f1f2": {
+			"name": "Jamaica"
+		},
+		"1f1ef_1f1f4": {
+			"name": "Jordan"
+		},
+		"1f1ef_1f1f5": {
+			"name": "Japan"
+		},
+		"1f1f0_1f1ea": {
+			"name": "Kenya"
+		},
+		"1f1f0_1f1ec": {
+			"name": "Kyrgyzstan"
+		},
+		"1f1f0_1f1ed": {
+			"name": "Cambodia"
+		},
+		"1f1f0_1f1ee": {
+			"name": "Kiribati"
+		},
+		"1f1f0_1f1f2": {
+			"name": "Comoros"
+		},
+		"1f1f0_1f1f3": {
+			"name": "St. Kitts & Nevis"
+		},
+		"1f1f0_1f1f5": {
+			"name": "North Korea"
+		},
+		"1f1f0_1f1f7": {
+			"name": "South Korea"
+		},
+		"1f1f0_1f1fc": {
+			"name": "Kuwait"
+		},
+		"1f1f0_1f1fe": {
+			"name": "Cayman Islands"
+		},
+		"1f1f0_1f1ff": {
+			"name": "Kazakhstan"
+		},
+		"1f1f1_1f1e6": {
+			"name": "Laos"
+		},
+		"1f1f1_1f1e7": {
+			"name": "Lebanon"
+		},
+		"1f1f1_1f1e8": {
+			"name": "St. Lucia"
+		},
+		"1f1f1_1f1ee": {
+			"name": "Liechtenstein"
+		},
+		"1f1f1_1f1f0": {
+			"name": "Sri Lanka"
+		},
+		"1f1f1_1f1f7": {
+			"name": "Liberia"
+		},
+		"1f1f1_1f1f8": {
+			"name": "Lesotho"
+		},
+		"1f1f1_1f1f9": {
+			"name": "Lithuania"
+		},
+		"1f1f1_1f1fa": {
+			"name": "Luxembourg"
+		},
+		"1f1f1_1f1fb": {
+			"name": "Latvia"
+		},
+		"1f1f1_1f1fe": {
+			"name": "Libya"
+		},
+		"1f1f2_1f1e6": {
+			"name": "Morocco"
+		},
+		"1f1f2_1f1e8": {
+			"name": "Monaco"
+		},
+		"1f1f2_1f1e9": {
+			"name": "Moldova"
+		},
+		"1f1f2_1f1ea": {
+			"name": "Montenegro"
+		},
+		"1f1f2_1f1eb": {
+			"name": "St. Martin"
+		},
+		"1f1f2_1f1ec": {
+			"name": "Madagascar"
+		},
+		"1f1f2_1f1ed": {
+			"name": "Marshall Islands"
+		},
+		"1f1f2_1f1f0": {
+			"name": "North Macedonia"
+		},
+		"1f1f2_1f1f1": {
+			"name": "Mali"
+		},
+		"1f1f2_1f1f2": {
+			"name": "Myanmar (Burma)"
+		},
+		"1f1f2_1f1f3": {
+			"name": "Mongolia"
+		},
+		"1f1f2_1f1f4": {
+			"name": "Macao SAR China"
+		},
+		"1f1f2_1f1f5": {
+			"name": "Northern Mariana Islands"
+		},
+		"1f1f2_1f1f6": {
+			"name": "Martinique"
+		},
+		"1f1f2_1f1f7": {
+			"name": "Mauritania"
+		},
+		"1f1f2_1f1f8": {
+			"name": "Montserrat"
+		},
+		"1f1f2_1f1f9": {
+			"name": "Malta"
+		},
+		"1f1f2_1f1fa": {
+			"name": "Mauritius"
+		},
+		"1f1f2_1f1fb": {
+			"name": "Maldives"
+		},
+		"1f1f2_1f1fc": {
+			"name": "Malawi"
+		},
+		"1f1f2_1f1fd": {
+			"name": "Mexico"
+		},
+		"1f1f2_1f1fe": {
+			"name": "Malaysia"
+		},
+		"1f1f2_1f1ff": {
+			"name": "Mozambique"
+		},
+		"1f1f3_1f1e6": {
+			"name": "Namibia"
+		},
+		"1f1f3_1f1e8": {
+			"name": "New Caledonia"
+		},
+		"1f1f3_1f1ea": {
+			"name": "Niger"
+		},
+		"1f1f3_1f1eb": {
+			"name": "Norfolk Island"
+		},
+		"1f1f3_1f1ec": {
+			"name": "Nigeria"
+		},
+		"1f1f3_1f1ee": {
+			"name": "Nicaragua"
+		},
+		"1f1f3_1f1f1": {
+			"name": "Netherlands"
+		},
+		"1f1f3_1f1f4": {
+			"name": "Norway"
+		},
+		"1f1f3_1f1f5": {
+			"name": "Nepal"
+		},
+		"1f1f3_1f1f7": {
+			"name": "Nauru"
+		},
+		"1f1f3_1f1fa": {
+			"name": "Niue"
+		},
+		"1f1f3_1f1ff": {
+			"name": "New Zealand"
+		},
+		"1f1f4_1f1f2": {
+			"name": "Oman"
+		},
+		"1f1f5_1f1e6": {
+			"name": "Panama"
+		},
+		"1f1f5_1f1ea": {
+			"name": "Peru"
+		},
+		"1f1f5_1f1eb": {
+			"name": "French Polynesia"
+		},
+		"1f1f5_1f1ec": {
+			"name": "Papua New Guinea"
+		},
+		"1f1f5_1f1ed": {
+			"name": "Philippines"
+		},
+		"1f1f5_1f1f0": {
+			"name": "Pakistan"
+		},
+		"1f1f5_1f1f1": {
+			"name": "Poland"
+		},
+		"1f1f5_1f1f2": {
+			"name": "St. Pierre & Miquelon"
+		},
+		"1f1f5_1f1f3": {
+			"name": "Pitcairn Islands"
+		},
+		"1f1f5_1f1f7": {
+			"name": "Puerto Rico"
+		},
+		"1f1f5_1f1f8": {
+			"name": "Palestinian Territories"
+		},
+		"1f1f5_1f1f9": {
+			"name": "Portugal"
+		},
+		"1f1f5_1f1fc": {
+			"name": "Palau"
+		},
+		"1f1f5_1f1fe": {
+			"name": "Paraguay"
+		},
+		"1f1f6_1f1e6": {
+			"name": "Qatar"
+		},
+		"1f1f7_1f1ea": {
+			"name": "Réunion"
+		},
+		"1f1f7_1f1f4": {
+			"name": "Romania"
+		},
+		"1f1f7_1f1f8": {
+			"name": "Serbia"
+		},
+		"1f1f7_1f1fa": {
+			"name": "Russia"
+		},
+		"1f1f7_1f1fc": {
+			"name": "Rwanda"
+		},
+		"1f1f8_1f1e6": {
+			"name": "Saudi Arabia"
+		},
+		"1f1f8_1f1e7": {
+			"name": "Solomon Islands"
+		},
+		"1f1f8_1f1e8": {
+			"name": "Seychelles"
+		},
+		"1f1f8_1f1e9": {
+			"name": "Sudan"
+		},
+		"1f1f8_1f1ea": {
+			"name": "Sweden"
+		},
+		"1f1f8_1f1ec": {
+			"name": "Singapore"
+		},
+		"1f1f8_1f1ed": {
+			"name": "St. Helena"
+		},
+		"1f1f8_1f1ee": {
+			"name": "Slovenia"
+		},
+		"1f1f8_1f1ef": {
+			"name": "Svalbard & Jan Mayen"
+		},
+		"1f1f8_1f1f0": {
+			"name": "Slovakia"
+		},
+		"1f1f8_1f1f1": {
+			"name": "Sierra Leone"
+		},
+		"1f1f8_1f1f2": {
+			"name": "San Marino"
+		},
+		"1f1f8_1f1f3": {
+			"name": "Senegal"
+		},
+		"1f1f8_1f1f4": {
+			"name": "Somalia"
+		},
+		"1f1f8_1f1f7": {
+			"name": "Suriname"
+		},
+		"1f1f8_1f1f8": {
+			"name": "South Sudan"
+		},
+		"1f1f8_1f1f9": {
+			"name": "São Tomé & Príncipe"
+		},
+		"1f1f8_1f1fb": {
+			"name": "El Salvador"
+		},
+		"1f1f8_1f1fd": {
+			"name": "Sint Maarten"
+		},
+		"1f1f8_1f1fe": {
+			"name": "Syria"
+		},
+		"1f1f8_1f1ff": {
+			"name": "Eswatini"
+		},
+		"1f1f9_1f1e6": {
+			"name": "Tristan da Cunha"
+		},
+		"1f1f9_1f1e8": {
+			"name": "Turks & Caicos Islands"
+		},
+		"1f1f9_1f1e9": {
+			"name": "Chad"
+		},
+		"1f1f9_1f1eb": {
+			"name": "French Southern Territories"
+		},
+		"1f1f9_1f1ec": {
+			"name": "Togo"
+		},
+		"1f1f9_1f1ed": {
+			"name": "Thailand"
+		},
+		"1f1f9_1f1ef": {
+			"name": "Tajikistan"
+		},
+		"1f1f9_1f1f0": {
+			"name": "Tokelau"
+		},
+		"1f1f9_1f1f1": {
+			"name": "Timor-Leste"
+		},
+		"1f1f9_1f1f2": {
+			"name": "Turkmenistan"
+		},
+		"1f1f9_1f1f3": {
+			"name": "Tunisia"
+		},
+		"1f1f9_1f1f4": {
+			"name": "Tonga"
+		},
+		"1f1f9_1f1f7": {
+			"name": "Turkey"
+		},
+		"1f1f9_1f1f9": {
+			"name": "Trinidad & Tobago"
+		},
+		"1f1f9_1f1fb": {
+			"name": "Tuvalu"
+		},
+		"1f1f9_1f1fc": {
+			"name": "Taiwan"
+		},
+		"1f1f9_1f1ff": {
+			"name": "Tanzania"
+		},
+		"1f1fa_1f1e6": {
+			"name": "Ukraine"
+		},
+		"1f1fa_1f1ec": {
+			"name": "Uganda"
+		},
+		"1f1fa_1f1f2": {
+			"name": "U.S. Outlying Islands"
+		},
+		"1f1fa_1f1f3": {
+			"name": "United Nations"
+		},
+		"1f1fa_1f1f8": {
+			"name": "United States"
+		},
+		"1f1fa_1f1fe": {
+			"name": "Uruguay"
+		},
+		"1f1fa_1f1ff": {
+			"name": "Uzbekistan"
+		},
+		"1f1fb_1f1e6": {
+			"name": "Vatican City"
+		},
+		"1f1fb_1f1e8": {
+			"name": "St. Vincent & Grenadines"
+		},
+		"1f1fb_1f1ea": {
+			"name": "Venezuela"
+		},
+		"1f1fb_1f1ec": {
+			"name": "British Virgin Islands"
+		},
+		"1f1fb_1f1ee": {
+			"name": "U.S. Virgin Islands"
+		},
+		"1f1fb_1f1f3": {
+			"name": "Vietnam"
+		},
+		"1f1fb_1f1fa": {
+			"name": "Vanuatu"
+		},
+		"1f1fc_1f1eb": {
+			"name": "Wallis & Futuna"
+		},
+		"1f1fc_1f1f8": {
+			"name": "Samoa"
+		},
+		"1f1fd_1f1f0": {
+			"name": "Kosovo"
+		},
+		"1f1fe_1f1ea": {
+			"name": "Yemen"
+		},
+		"1f1fe_1f1f9": {
+			"name": "Mayotte"
+		},
+		"1f1ff_1f1e6": {
+			"name": "South Africa"
+		},
+		"1f1ff_1f1f2": {
+			"name": "Zambia"
+		},
+		"1f1ff_1f1fc": {
+			"name": "Zimbabwe"
+		},
+		"1f3f4_e0067_e0062_e0065_e006e_e0067_e007f": {
+			"name": "England"
+		},
+		"1f3f4_e0067_e0062_e0073_e0063_e0074_e007f": {
+			"name": "Scotland"
+		},
+		"1f3f4_e0067_e0062_e0077_e006c_e0073_e007f": {
+			"name": "Wales"
+		}
 	}
 }
