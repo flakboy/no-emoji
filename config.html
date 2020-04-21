@@ -4,11 +4,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Plugin configurator</title>
 	<style>
+		* {
+			box-sizing: border-box;
+		}
+
 		body {
-			min-width: 800px;
+			min-width: 1000px;
+			min-height: 800px;
 		}
 
 		form,
@@ -18,8 +22,58 @@
 
 		input[type=url] {
 			display: block;
-			font-size: 14px;
+			font-size: 16px;
 			width: 250px;
+		}
+
+		.category__title {
+			user-select: none;
+		}
+
+		.category__wrapper {
+			transition: height 1s ease;
+			height: 0;
+			overflow: hidden;
+		}
+
+		.emoji-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-start;
+		}
+
+
+		.emoji-list__cell {
+			flex: 0 0 24%;
+			margin: 1px;
+			height: 40px;
+			border: 1px solid silver;
+			display: inline-flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+
+		.emoji-list__icon {
+			display: flex;
+			flex: 0 0 20%;
+			justify-content: center;
+			align-items: center;
+			font-size: 24px;
+		}
+
+		.emoji-list__name {
+			display: flex;
+			flex: 0 0 60%;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+
+		.emoji-list__check {
+			display: flex;
+			flex: 0 0 20%;
+			justify-content: center;
+			align-items: center
 		}
 	</style>
 </head>
@@ -27,27 +81,22 @@
 <body>
 	<h2>Preferencje</h2>
 	<form id="settings__action" autocomplete="off">
-		<fieldset>
-			<select name="action" id="action">
-				<option value="url">Zastąp grafiką (url)</option>
-				<option value="hide">Ukryj emoji</option>
-			</select>
-		</fieldset>
+		<!-- <fieldset> -->
+		<select name="action" id="action">
+			<option value="url">Zastąp grafiką (url)</option>
+			<option value="hide">Ukryj emoji</option>
+		</select>
+		<!-- </fieldset> -->
 
-		<fieldset>
-			<h3>Adres URL grafiki</h3>
-			<label for="url">Adres URL</label>
-			<input id="url" type="url" class="settings__address">
-			<!--
-				<label for="fs">Ścieżka pliku na dysku</label>
-				<input id="fs" type="url" class="settings__address">
-			-->
-		</fieldset>
+		<!-- <fieldset> -->
+		<h3>Adres URL grafiki</h3>
+		<label for="url">Adres URL</label>
+		<input id="url" type="url" class="settings__address">
+		<!-- </fieldset> -->
 		<input type="submit">
 	</form>
-	<form id="settings__filter">
-		<table>
-		</table>
+	<form id="settings__selected-emoji">
+		<h3> Wybierz emoji, które chcesz filtrować </h3>
 		<!-- <input type="submit"> -->
 	</form>
 	<script src="config.js">

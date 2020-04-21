@@ -1,35 +1,63 @@
-let actionSelect = document.getElementById("action");
-let url = document.getElementById("url")
+let actionSelect = document.getElementById("action"),
+	url = document.getElementById("url");
 
-xhr = new XMLHttpRequest();
+let xhr = new XMLHttpRequest();
 xhr.addEventListener("readystatechange", () => {
 	if (xhr.readyState === 4) {
-		let emojiInfo = JSON.parse(xhr.response)
-		console.log(emojiInfo)
-		let emojiTable = document.querySelector("#settings__filter > table");
-		console.time("start")
-		for (let [key, value] of Object.entries(emojiInfo)) {
-			let row = document.createElement("tr");
-			let emojiLabel = value.name;
+		let emojiInfo = JSON.parse(xhr.response);
+		let section = document.getElementById("settings__selected-emoji");
 
-			let tdPreview = document.createElement("td");
-			tdPreview.appendChild(document.createTextNode(String.fromCodePoint(parseInt(key, 16))));
-			row.appendChild(tdPreview);
+		for (let category of Object.keys(emojiInfo)) {
+			let categoryWrapper = document.createElement("div")
+			categoryWrapper.classList.add("category__wrapper");
+			categoryWrapper.id = "wrapper-" + category;
 
-			let tdName = document.createElement("td");
-			tdName.appendChild(document.createTextNode(emojiLabel));
-			row.appendChild(tdName);
+			let categoryTable = document.createElement("div"),
+				categoryTitle = document.createElement("h3");
+			categoryTable.classList.add("emoji-list")
 
-			let tdCheckbox = document.createElement("td");
-			let checkbox = document.createElement("input");
-			checkbox.type = "checkbox";
-			checkbox.name = emojiLabel;
-			tdCheckbox.appendChild(checkbox);
-			row.appendChild(tdCheckbox);
+			categoryTitle.textContent = category;
+			categoryTitle.classList.add("category__title");
+			categoryTitle.addEventListener("click", function () {
 
-			emojiTable.appendChild(row);
+				if (categoryWrapper.style.height == "0px" || categoryWrapper.style.height == "")
+					categoryWrapper.style.height = `${categoryWrapper.scrollHeight}px`;
+				else
+					categoryWrapper.style.height = "0px";
+
+				console.log(categoryWrapper.style.height)
+			});
+
+			categoryWrapper.appendChild(categoryTable);
+
+			for (let [key, value] of Object.entries(emojiInfo[category])) {
+				let categoryCell = document.createElement("div");
+				categoryCell.classList.add("emoji-list__cell");
+
+				let tdPreview = document.createElement("div");
+				tdPreview.textContent = String.fromCodePoint(parseInt(key, 16));
+				tdPreview.classList.add("emoji-list__icon");
+				categoryCell.appendChild(tdPreview);
+
+				let tdName = document.createElement("div");
+				tdName.textContent = value.name;
+				tdName.classList.add("emoji-list__name")
+				categoryCell.appendChild(tdName);
+
+
+				let tdCheckbox = document.createElement("div"),
+					checkbox = document.createElement("input");
+				checkbox.type = "checkbox";
+				checkbox.name = "emoji[]";
+				checkbox.value = value.name;
+				tdCheckbox.appendChild(checkbox);
+				categoryCell.appendChild(tdCheckbox);
+
+				categoryTable.appendChild(categoryCell);
+			}
+			section.appendChild(categoryTitle);
+			section.appendChild(categoryWrapper);
 		}
-		console.timeEnd("start")
 	}
 });
 xhr.open("GET", chrome.extension.getURL("/emoji_db.json"), true);
@@ -39,7 +67,7 @@ chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
 	actionType = data.action;
 	url.value = data.imgUrl;
 	for (option of actionSelect.children) {
-		if (option.value == actionType) {
+		if (option.value === actionType) {
 			option.selected = true;
 		}
 	}
@@ -72,8 +100,10 @@ actionSelect.addEventListener("change", () => {
 document.getElementById("settings__action").onsubmit = () => {
 	if (!url.disabled) {
 		if (url.value.length) {
-			chrome.storage.local.set({ action: actionType });
-			chrome.storage.local.set({ imgUrl: url.value });
+			chrome.storage.local.set({
+				action: actionType,
+				imgUrl: url.value,
+			});
 		} else {
 			alert('Pole "Adres URL" nie może być puste');
 			return false;
@@ -81,7 +111,6 @@ document.getElementById("settings__action").onsubmit = () => {
 	} else {
 		chrome.storage.local.set({ action: actionType });
 	}
-
 	/*chrome.storage.local.get(["xd"], function (result) {
 		alert("Pomyślnie zapisano ustawienia:" + result.xd)
 	})*/
