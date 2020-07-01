@@ -1,8 +1,5 @@
 {
 	"smileys": {
-		"2620": {
-			"name": "skull and crossbones"
-		},
 		"2639": {
 			"name": "frowning face"
 		},
@@ -306,9 +303,6 @@
 		"1f47d": {
 			"name": "alien"
 		},
-		"1f47e": {
-			"name": "alien monster"
-		},
 		"1f916": {
 			"name": "robot"
 		},
@@ -560,6 +554,9 @@
 		},
 		"1f471_200d_2642_fe0f": {
 			"name": "man: blond hair"
+		},
+		"1f4bc": {
+			"name": "briefcase"
 		},
 		"1f9d3": {
 			"name": "older person"
@@ -1059,9 +1056,6 @@
 		"1f57a": {
 			"name": "man dancing"
 		},
-		"1f574": {
-			"name": "person in suit levitating"
-		},
 		"1f46f": {
 			"name": "people with bunny ears"
 		},
@@ -1091,15 +1085,6 @@
 		},
 		"1f93a": {
 			"name": "person fencing"
-		},
-		"1f3c7": {
-			"name": "horse racing"
-		},
-		"26f7": {
-			"name": "skier"
-		},
-		"1f3c2": {
-			"name": "snowboarder"
 		},
 		"1f3cc": {
 			"name": "person golfing"
@@ -1226,12 +1211,6 @@
 		},
 		"1f9d8_200d_2640_fe0f": {
 			"name": "woman in lotus position"
-		},
-		"1f6c0": {
-			"name": "person taking bath"
-		},
-		"1f6cc": {
-			"name": "person in bed"
 		},
 		"1f9d1_200d_1f91d_200d_1f9d1": {
 			"name": "people holding hands"
@@ -1443,9 +1422,6 @@
 		"1f45d": {
 			"name": "clutch bag"
 		},
-		"1f6cd": {
-			"name": "shopping bags"
-		},
 		"1f392": {
 			"name": "backpack"
 		},
@@ -1497,9 +1473,6 @@
 		"26d1": {
 			"name": "rescue worker’s helmet"
 		},
-		"1f4ff": {
-			"name": "prayer beads"
-		},
 		"1f484": {
 			"name": "lipstick"
 		},
@@ -1508,6 +1481,36 @@
 		}
 	},
 	"nature": {
+		"1f980": {
+			"name": "crab"
+		},
+		"1f311": {
+			"name": "new moon"
+		},
+		"1f312": {
+			"name": "waxing crescent moon"
+		},
+		"1f313": {
+			"name": "first quarter moon"
+		},
+		"1f314": {
+			"name": "waxing gibbous moon"
+		},
+		"1f315": {
+			"name": "full moon"
+		},
+		"1f316": {
+			"name": "waning gibbous moon"
+		},
+		"1f317": {
+			"name": "last quarter moon"
+		},
+		"1f318": {
+			"name": "waning crescent moon"
+		},
+		"1f319": {
+			"name": "crescent moon"
+		},
 		"2618": {
 			"name": "shamrock"
 		},
@@ -1906,6 +1909,18 @@
 		},
 		"1f343": {
 			"name": "leaf fluttering in wind"
+		},
+		"1f30d": {
+			"name": "globe showing Europe-Africa"
+		},
+		"1f30e": {
+			"name": "globe showing Americas"
+		},
+		"1f30f": {
+			"name": "globe showing Asia-Australia"
+		},
+		"1f310": {
+			"name": "globe with meridians"
 		}
 	},
 	"food": {
@@ -2280,6 +2295,9 @@
 		"2049": {
 			"name": "exclamation question mark"
 		},
+		"2668": {
+			"name": "hot springs"
+		},
 		"2122": {
 			"name": "trade mark"
 		},
@@ -2421,9 +2439,6 @@
 		"3299": {
 			"name": "Japanese “secret” button"
 		},
-		"1f48c": {
-			"name": "love letter"
-		},
 		"1f498": {
 			"name": "heart with arrow"
 		},
@@ -2466,6 +2481,9 @@
 		"1f49c": {
 			"name": "purple heart"
 		},
+		"1f4b9": {
+			"name": "chart increasing with yen"
+		},
 		"1f90e": {
 			"name": "brown heart"
 		},
@@ -2492,9 +2510,6 @@
 		},
 		"1f4a8": {
 			"name": "dashing away"
-		},
-		"1f573": {
-			"name": "hole"
 		},
 		"1f4a3": {
 			"name": "bomb"
@@ -2586,17 +2601,11 @@
 		"1f566": {
 			"name": "eleven-thirty"
 		},
-		"1f390": {
-			"name": "wind chime"
-		},
 		"1f391": {
 			"name": "moon viewing ceremony"
 		},
 		"1f9e7": {
 			"name": "red envelope"
-		},
-		"1f380": {
-			"name": "ribbon"
 		},
 		"265f": {
 			"name": "chess pawn"
@@ -2642,9 +2651,6 @@
 		},
 		"1f3b6": {
 			"name": "musical notes"
-		},
-		"1f4b9": {
-			"name": "chart increasing with yen"
 		},
 		"1f3e7": {
 			"name": "ATM sign"
@@ -3182,21 +3188,6 @@
 		}
 	},
 	"flags": {
-		"1f3c1": {
-			"name": "chequered flag"
-		},
-		"1f6a9": {
-			"name": "triangular flag"
-		},
-		"1f38c": {
-			"name": "crossed flags"
-		},
-		"1f3f4": {
-			"name": "black flag"
-		},
-		"1f3f3": {
-			"name": "white flag"
-		},
 		"1f3f3_fe0f_200d_1f308": {
 			"name": "rainbow flag"
 		},
@@ -3988,6 +3979,1239 @@
 		},
 		"1f3f4_e0067_e0062_e0077_e006c_e0073_e007f": {
 			"name": "Wales"
+		}
+	},
+	"activities": {
+		"1f397": {
+			"name": "reminder ribbon"
+		},
+		"1f3a7": {
+			"name": "headphone"
+		},
+		"1f3f9": {
+			"name": "bow and arrow"
+		},
+		"1f3a4": {
+			"name": "microphone"
+		},
+		"1f3c2": {
+			"name": "snowboarder"
+		},
+		"1f396": {
+			"name": "military medal"
+		},
+		"1f3c6": {
+			"name": "trophy"
+		},
+		"1f3c5": {
+			"name": "sports medal"
+		},
+		"1f947": {
+			"name": "1st place medal"
+		},
+		"1f948": {
+			"name": "2nd place medal"
+		},
+		"1f949": {
+			"name": "3rd place medal"
+		},
+		"26bd": {
+			"name": "soccer ball"
+		},
+		"26be": {
+			"name": "baseball"
+		},
+		"1f94e": {
+			"name": "softball"
+		},
+		"1f3c0": {
+			"name": "basketball"
+		},
+		"1f3d0": {
+			"name": "volleyball"
+		},
+		"1f3c8": {
+			"name": "american football"
+		},
+		"1f3c9": {
+			"name": "rugby football"
+		},
+		"1f3be": {
+			"name": "tennis"
+		},
+		"1f94f": {
+			"name": "flying disc"
+		},
+		"1f3b3": {
+			"name": "bowling"
+		},
+		"1f3cf": {
+			"name": "cricket game"
+		},
+		"1f3d1": {
+			"name": "field hockey"
+		},
+		"1f3d2": {
+			"name": "ice hockey"
+		},
+		"1f94d": {
+			"name": "lacrosse"
+		},
+		"1f3d3": {
+			"name": "ping pong"
+		},
+		"1f3f8": {
+			"name": "badminton"
+		},
+		"1f94a": {
+			"name": "boxing glove"
+		},
+		"1f94b": {
+			"name": "martial arts uniform"
+		},
+		"1f945": {
+			"name": "goal net"
+		},
+		"26f3": {
+			"name": "flag in hole"
+		},
+		"26f8": {
+			"name": "ice skate"
+		},
+		"1f3a3": {
+			"name": "fishing pole"
+		},
+		"1f93f": {
+			"name": "diving mask"
+		},
+		"1f3bd": {
+			"name": "running shirt"
+		},
+		"1f3bf": {
+			"name": "skis"
+		},
+		"1f6f7": {
+			"name": "sled"
+		},
+		"1f94c": {
+			"name": "curling stone"
+		},
+		"26f7": {
+			"name": "skier"
+		},
+		"1f3af": {
+			"name": "direct hit"
+		},
+		"1fa80": {
+			"name": "yo-yo"
+		},
+		"1f3c7": {
+			"name": "horse racing"
+		},
+		"1fa81": {
+			"name": "kite"
+		},
+		"1f3b1": {
+			"name": "pool 8 ball"
+		},
+		"1fa84": {
+			"name": "magic wand"
+		},
+		"1f9ff": {
+			"name": "nazar amulet"
+		},
+		"1f3ae": {
+			"name": "video game"
+		},
+		"1f3b0": {
+			"name": "slot machine"
+		},
+		"1f3b2": {
+			"name": "game die"
+		},
+		"1f9e9": {
+			"name": "puzzle piece"
+		},
+		"1f9f8": {
+			"name": "teddy bear"
+		},
+		"1fa85": {
+			"name": "piñata"
+		},
+		"1fa86": {
+			"name": "nesting dolls"
+		},
+		"1f3ad": {
+			"name": "performing arts"
+		},
+		"1f3a8": {
+			"name": "artist palette"
+		},
+		"1f47e": {
+			"name": "alien monster"
+		},
+		"1f3ac": {
+			"name": "clapper board"
+		},
+		"1f39f": {
+			"name": "addmission tickets"
+		},
+		"1f3ab": {
+			"name": "ticket"
+		},
+		"1f3b7": {
+			"name": "saxophone"
+		},
+		"1f3aa": {
+			"name": "circus tent"
+		},
+		"1f3bb": {
+			"name": "violin"
+		},
+		"1f3bc": {
+			"name": "musical score"
+		},
+		"1f3f5": {
+			"name": "rosette"
+		},
+		"1f3ba": {
+			"name": "trumpet"
+		},
+		"1f3b8": {
+			"name": "guitar"
+		},
+		"1f3b9": {
+			"name": "musical keyboard"
+		},
+		"1f574": {
+			"name": "person in suit levitating"
+		}
+	},
+	"travel": {
+		"2693": {
+			"name": "anchor"
+		},
+		"2708": {
+			"name": "airplane"
+		},
+		"1f5fe": {
+			"name": "map of Japan"
+		},
+		"1f9ed": {
+			"name": "compass"
+		},
+		"1f3d4": {
+			"name": "snow-capped mountain"
+		},
+		"26f0": {
+			"name": "mountain"
+		},
+		"1f30b": {
+			"name": "volcano"
+		},
+		"1f5fb": {
+			"name": "mount fuji"
+		},
+		"1f3d5": {
+			"name": "camping"
+		},
+		"1f3d6": {
+			"name": "beach with umbrella"
+		},
+		"1f3dc": {
+			"name": "desert"
+		},
+		"1f3dd": {
+			"name": "desert island"
+		},
+		"1f3de": {
+			"name": "national park"
+		},
+		"1f3df": {
+			"name": "stadium"
+		},
+		"1f3db": {
+			"name": "classical building"
+		},
+		"1f3d7": {
+			"name": "building construction"
+		},
+		"1f9f1": {
+			"name": "brick"
+		},
+		"1faa8": {
+			"name": "rock"
+		},
+		"1fab5": {
+			"name": "wood"
+		},
+		"1f3d8": {
+			"name": "houses"
+		},
+		"1f3da": {
+			"name": "derelict house"
+		},
+		"1f3e0": {
+			"name": "house"
+		},
+		"1f3e1": {
+			"name": "house with garden"
+		},
+		"1f3c1": {
+			"name": "chequered flag"
+		},
+		"1f391": {
+			"name": "moon viewing ceremony"
+		},
+		"1f3e2": {
+			"name": "office building"
+		},
+		"1f3e3": {
+			"name": "Japanese post office"
+		},
+		"1f3e4": {
+			"name": "post office"
+		},
+		"1f3e5": {
+			"name": "hospital"
+		},
+		"1f3e6": {
+			"name": "bank"
+		},
+		"1f3e8": {
+			"name": "hotel"
+		},
+		"1f3e9": {
+			"name": "love hotel"
+		},
+		"1f3ea": {
+			"name": "convenience store"
+		},
+		"1f3eb": {
+			"name": "school"
+		},
+		"1f3ec": {
+			"name": "department store"
+		},
+		"1f3ed": {
+			"name": "factory"
+		},
+		"1f3ef": {
+			"name": "Japanese castle"
+		},
+		"1f3f0": {
+			"name": "castle"
+		},
+		"1f492": {
+			"name": "wedding"
+		},
+		"1f5fc": {
+			"name": "Tokyo tower"
+		},
+		"1f5fd": {
+			"name": "Statue of Liberty"
+		},
+		"26ea": {
+			"name": "church"
+		},
+		"1f54c": {
+			"name": "mosque"
+		},
+		"1f6d5": {
+			"name": "hindu temple"
+		},
+		"1f54d": {
+			"name": "synagogue"
+		},
+		"26e9": {
+			"name": "shinto shrine"
+		},
+		"1f54b": {
+			"name": "kaaba"
+		},
+		"26f2": {
+			"name": "fountain"
+		},
+		"26fa": {
+			"name": "tent"
+		},
+		"1f301": {
+			"name": "foggy"
+		},
+		"1f303": {
+			"name": "night with stars"
+		},
+		"1f3d9": {
+			"name": "cityscape"
+		},
+		"1f304": {
+			"name": "sunrise over mountains"
+		},
+		"1f305": {
+			"name": "sunrise"
+		},
+		"1f306": {
+			"name": "cityscape at dusk"
+		},
+		"1f307": {
+			"name": "sunset"
+		},
+		"1f309": {
+			"name": "bridge at night"
+		},
+		"1f3a0": {
+			"name": "carousel horse"
+		},
+		"1f3a1": {
+			"name": "ferris wheel"
+		},
+		"1f3a2": {
+			"name": "roller coaster"
+		},
+		"1f682": {
+			"name": "locomotive"
+		},
+		"1f683": {
+			"name": "railway car"
+		},
+		"1f684": {
+			"name": "high-speed train"
+		},
+		"1f685": {
+			"name": "bullet train"
+		},
+		"1f686": {
+			"name": "train"
+		},
+		"1f687": {
+			"name": "metro"
+		},
+		"1f688": {
+			"name": "light rail"
+		},
+		"1f689": {
+			"name": "station"
+		},
+		"1f68a": {
+			"name": "tram"
+		},
+		"1f69d": {
+			"name": "monorail"
+		},
+		"1f69e": {
+			"name": "mountain railway"
+		},
+		"1f68b": {
+			"name": "tram car"
+		},
+		"1f68c": {
+			"name": "bus"
+		},
+		"1f68d": {
+			"name": "oncoming bus"
+		},
+		"1f68e": {
+			"name": "trolleybus"
+		},
+		"1f690": {
+			"name": "minibus"
+		},
+		"1f691": {
+			"name": "ambulance"
+		},
+		"1f692": {
+			"name": "fire engine"
+		},
+		"1f693": {
+			"name": "police car"
+		},
+		"1f694": {
+			"name": "oncoming police car"
+		},
+		"1f695": {
+			"name": "taxi"
+		},
+		"1f696": {
+			"name": "oncoming taxi"
+		},
+		"1f697": {
+			"name": "automobile"
+		},
+		"1f698": {
+			"name": "oncoming automobile"
+		},
+		"1f699": {
+			"name": "sport utility vehicle"
+		},
+		"1f69a": {
+			"name": "delivery truck"
+		},
+		"1f69b": {
+			"name": "articulated lorry"
+		},
+		"1f69c": {
+			"name": "tractor"
+		},
+		"1f3ce": {
+			"name": "racing car"
+		},
+		"1f3cd": {
+			"name": "motorcycle"
+		},
+		"1f6f5": {
+			"name": "motor scooter"
+		},
+		"1f9bd": {
+			"name": "manual wheelchair"
+		},
+		"1f9bc": {
+			"name": "motorized wheelchair"
+		},
+		"1f6fa": {
+			"name": "auto rickshaw"
+		},
+		"1f6b2": {
+			"name": "bicycle"
+		},
+		"1f6f4": {
+			"name": "kick scooter"
+		},
+		"1f6f9": {
+			"name": "skateboard"
+		},
+		"1f6fc": {
+			"name": "roller skate"
+		},
+		"1f68f": {
+			"name": "bus stop"
+		},
+		"1f6e3": {
+			"name": "motorway"
+		},
+		"1f6e4": {
+			"name": "railway track"
+		},
+		"26fd": {
+			"name": "fuel pump"
+		},
+		"1f6a8": {
+			"name": "police car light"
+		},
+		"1f6a5": {
+			"name": "horizontal traffic light"
+		},
+		"1f6a6": {
+			"name": "vertical traffic light"
+		},
+		"1f6d1": {
+			"name": "stop sign"
+		},
+		"1f6a7": {
+			"name": "construction"
+		},
+		"26f5": {
+			"name": "sailboat"
+		},
+		"1f6f6": {
+			"name": "canoe"
+		},
+		"1f6a4": {
+			"name": "speedboat"
+		},
+		"1f6f3": {
+			"name": "passenger ship"
+		},
+		"26f4": {
+			"name": "ferry"
+		},
+		"1f6e5": {
+			"name": "motor boat"
+		},
+		"1f6a2": {
+			"name": "ship"
+		},
+		"1f6e9": {
+			"name": "small airplane"
+		},
+		"1f6eb": {
+			"name": "airplane departure"
+		},
+		"1f6ec": {
+			"name": "airplane arrival"
+		},
+		"1fa82": {
+			"name": "parachute"
+		},
+		"1f4ba": {
+			"name": "seat"
+		},
+		"1f681": {
+			"name": "helicopter"
+		},
+		"1f69f": {
+			"name": "suspension railway"
+		},
+		"1f6a0": {
+			"name": "mountain cableway"
+		},
+		"1f6a1": {
+			"name": "aerial tramway"
+		},
+		"1f6f0": {
+			"name": "satellite"
+		},
+		"1f680": {
+			"name": "rocket"
+		},
+		"1f6f8": {
+			"name": "flying saucer"
+		},
+		"1f308": {
+			"name": "rainbow"
+		},
+		"1f386": {
+			"name": "fireworks"
+		},
+		"26f1": {
+			"name": "umbrella on ground"
+		},
+		"1f30c": {
+			"name": "milky way"
+		},
+		"1f387": {
+			"name": "sparkler"
+		},
+		"1f320": {
+			"name": "shooting star"
+		}
+	},
+	"objects": {
+		"1f4e1": {
+			"name": "satellite antenna"
+		},
+		"1f579": {
+			"name": "joystick"
+		},
+		"1f6a9": {
+			"name": "triangular flag"
+		},
+		"1f3f4": {
+			"name": "black flag"
+		},
+		"1f3f3": {
+			"name": "white flag"
+		},
+		"1f4ef": {
+			"name": "postal horn"
+		},
+		"1f48c": {
+			"name": "love letter"
+		},
+		"1f38c": {
+			"name": "crossed flags"
+		},
+		"1f390": {
+			"name": "wind chime"
+		},
+		"1f38e": {
+			"name": "Japanese dolls"
+		},
+		"1f380": {
+			"name": "ribbon"
+		},
+		"1f389": {
+			"name": "party popper"
+		},
+		"1f381": {
+			"name": "wrapped gift"
+		},
+		"1f38a": {
+			"name": "confetti ball"
+		},
+		"1f38f": {
+			"name": "carp streamer"
+		},
+		"1f6ce": {
+			"name": "bellhop bell"
+		},
+		"1f6cd": {
+			"name": "shopping bags"
+		},
+		"1f388": {
+			"name": "balloon"
+		},
+		"1f6cc": {
+			"name": "person in bed"
+		},
+		"1f6c0": {
+			"name": "person taking bath"
+		},
+		"1f321": {
+			"name": "thermometer"
+		},
+		"1f52c": {
+			"name": "microscope"
+		},
+		"1f52d": {
+			"name": "telescope"
+		},
+		"1f573": {
+			"name": "hole"
+		},
+		"2697": {
+			"name": "alembic"
+		},
+		"1f4ff": {
+			"name": "prayer beads"
+		},
+		"1f52e": {
+			"name": "crystal ball"
+		},
+		"1f3fa": {
+			"name": "amphora"
+		},
+		"2620": {
+			"name": "skull and crossbones"
+		},
+		"1f52a": {
+			"name": "kitchen knife"
+		},
+		"1f5bc": {
+			"name": "framed picture"
+		},
+		"1f6e2": {
+			"name": "oil drum"
+		},
+		"1f488": {
+			"name": "barber pole"
+		},
+		"1f48e": {
+			"name": "gem stone"
+		},
+		"1f4a3": {
+			"name": "bomb"
+		},
+		"1f5fa": {
+			"name": "world map"
+		},
+		"2328": {
+			"name": "keyboard"
+		},
+		"2692": {
+			"name": "hammer and pick"
+		},
+		"2694": {
+			"name": "crossed swords"
+		},
+		"2696": {
+			"name": "balance scale"
+		},
+		"2699": {
+			"name": "gear"
+		},
+		"2702": {
+			"name": "scissors"
+		},
+		"2709": {
+			"name": "envelope"
+		},
+		"2712": {
+			"name": "black nib"
+		},
+		"1f399": {
+			"name": "studio microphone"
+		},
+		"1f39a": {
+			"name": "level slider"
+		},
+		"1f39b": {
+			"name": "control knobs"
+		},
+		"1f4fb": {
+			"name": "radio"
+		},
+		"1f4f1": {
+			"name": "mobile phone"
+		},
+		"1f4f2": {
+			"name": "mobile phone with arrow"
+		},
+		"260e": {
+			"name": "telephone"
+		},
+		"1f4de": {
+			"name": "telephone receiver"
+		},
+		"1f4df": {
+			"name": "pager"
+		},
+		"1f4e0": {
+			"name": "fax machine"
+		},
+		"1f50b": {
+			"name": "battery"
+		},
+		"1f50c": {
+			"name": "electric plug"
+		},
+		"1f4bb": {
+			"name": "laptop"
+		},
+		"1f5a5": {
+			"name": "desktop computer"
+		},
+		"1f5a8": {
+			"name": "printer"
+		},
+		"1f5b1": {
+			"name": "computer mouse"
+		},
+		"1f5b2": {
+			"name": "trackball"
+		},
+		"1f4bd": {
+			"name": "computer disk"
+		},
+		"1f4be": {
+			"name": "floppy disk"
+		},
+		"1f4bf": {
+			"name": "optical disk"
+		},
+		"1f4c0": {
+			"name": "dvd"
+		},
+		"1f9ee": {
+			"name": "abacus"
+		},
+		"1f3a5": {
+			"name": "movie camera"
+		},
+		"1f39e": {
+			"name": "film frames"
+		},
+		"1f4fd": {
+			"name": "film projector"
+		},
+		"1f4fa": {
+			"name": "television"
+		},
+		"1f4f7": {
+			"name": "camera"
+		},
+		"1f4f8": {
+			"name": "camera with flash"
+		},
+		"1f4f9": {
+			"name": "video camera"
+		},
+		"1f4fc": {
+			"name": "videocassette"
+		},
+		"1f50d": {
+			"name": "magnifying glass tilted left"
+		},
+		"1f50e": {
+			"name": "magnifying glass tilted right"
+		},
+		"1f56f": {
+			"name": "candle"
+		},
+		"1f4a1": {
+			"name": "light bulb"
+		},
+		"1f526": {
+			"name": "flashlight"
+		},
+		"1f3ee": {
+			"name": "red paper lantern"
+		},
+		"1fa94": {
+			"name": "diya lamp"
+		},
+		"1f4d4": {
+			"name": "notebook with decorative cover"
+		},
+		"1f4d5": {
+			"name": "closed book"
+		},
+		"1f4d6": {
+			"name": "open book"
+		},
+		"1f4d7": {
+			"name": "green book"
+		},
+		"1f4d8": {
+			"name": "blue book"
+		},
+		"1f4d9": {
+			"name": "orange book"
+		},
+		"1f4da": {
+			"name": "books"
+		},
+		"1f4d3": {
+			"name": "notebook"
+		},
+		"1f4d2": {
+			"name": "ledger"
+		},
+		"1f4c3": {
+			"name": "page with curl"
+		},
+		"1f4dc": {
+			"name": "scroll"
+		},
+		"1f4c4": {
+			"name": "page facing up"
+		},
+		"1f4f0": {
+			"name": "newspaper"
+		},
+		"1f5de": {
+			"name": "rolled-up newspaper"
+		},
+		"1f4d1": {
+			"name": "bookmark tabs"
+		},
+		"1f516": {
+			"name": "bookmark"
+		},
+		"1f3f7": {
+			"name": "label"
+		},
+		"1f4b0": {
+			"name": "money bag"
+		},
+		"1fa99": {
+			"name": "coin"
+		},
+		"1f4b4": {
+			"name": "yen banknote"
+		},
+		"1f4b5": {
+			"name": "dollar banknote"
+		},
+		"1f4b6": {
+			"name": "euro banknote"
+		},
+		"1f4b7": {
+			"name": "pound banknote"
+		},
+		"1f4b8": {
+			"name": "money with wings"
+		},
+		"1f4b3": {
+			"name": "credit card"
+		},
+		"1f9fe": {
+			"name": "receipt"
+		},
+		"1f4e7": {
+			"name": "e-mail"
+		},
+		"1f4e8": {
+			"name": "incoming envelope"
+		},
+		"1f4e9": {
+			"name": "envelope with arrow"
+		},
+		"1f4e4": {
+			"name": "outbox tray"
+		},
+		"1f4e5": {
+			"name": "inbox tray"
+		},
+		"1f4e6": {
+			"name": "package"
+		},
+		"1f4eb": {
+			"name": "closed mailbox with raised flag"
+		},
+		"1f4ea": {
+			"name": "closed mailbox with lowered flag"
+		},
+		"1f4ec": {
+			"name": "open mailbox with raised flag"
+		},
+		"1f4ed": {
+			"name": "open mailbox with lowered flag"
+		},
+		"1f4ee": {
+			"name": "postbox"
+		},
+		"1f5f3": {
+			"name": "ballot box with ballot"
+		},
+		"270f": {
+			"name": "pencil"
+		},
+		"1f58b": {
+			"name": "fountain pen"
+		},
+		"1f58a": {
+			"name": "pen"
+		},
+		"1f58c": {
+			"name": "paintbrush"
+		},
+		"1f58d": {
+			"name": "crayon"
+		},
+		"1f4dd": {
+			"name": "memo"
+		},
+		"1f4c1": {
+			"name": "file folder"
+		},
+		"1f4c2": {
+			"name": "open file folder"
+		},
+		"1f5c2": {
+			"name": "card index dividers"
+		},
+		"1f4c5": {
+			"name": "calendar"
+		},
+		"1f4c6": {
+			"name": "tear-off calendar"
+		},
+		"1f5d2": {
+			"name": "spiral notepad"
+		},
+		"1f5d3": {
+			"name": "spiral calendar"
+		},
+		"1f4c7": {
+			"name": "card index"
+		},
+		"1f4c8": {
+			"name": "chart increasing"
+		},
+		"1f4c9": {
+			"name": "chart decreasing"
+		},
+		"1f4ca": {
+			"name": "bar chart"
+		},
+		"1f4cb": {
+			"name": "clipboard"
+		},
+		"1f4cc": {
+			"name": "pushpin"
+		},
+		"1f4cd": {
+			"name": "round pushpin"
+		},
+		"1f4ce": {
+			"name": "paperclip"
+		},
+		"1f587": {
+			"name": "linked paperclips"
+		},
+		"1f4cf": {
+			"name": "straight ruler"
+		},
+		"1f4d0": {
+			"name": "triangular ruler"
+		},
+		"1f5c3": {
+			"name": "card file box"
+		},
+		"1f5c4": {
+			"name": "file cabinet"
+		},
+		"1f5d1": {
+			"name": "wastebasket"
+		},
+		"1f512": {
+			"name": "locked"
+		},
+		"1f513": {
+			"name": "unlocked"
+		},
+		"1f50f": {
+			"name": "locked with pen"
+		},
+		"1f510": {
+			"name": "locked with key"
+		},
+		"1f511": {
+			"name": "key"
+		},
+		"1f5dd": {
+			"name": "old key"
+		},
+		"1f528": {
+			"name": "hammer"
+		},
+		"1fa93": {
+			"name": "axe"
+		},
+		"26cf": {
+			"name": "pick"
+		},
+		"1f6e0": {
+			"name": "hammer and wrench"
+		},
+		"1f5e1": {
+			"name": "dagger"
+		},
+		"1f52b": {
+			"name": "pistol"
+		},
+		"1fa83": {
+			"name": "boomerang"
+		},
+		"1f6e1": {
+			"name": "shield"
+		},
+		"1f527": {
+			"name": "wrench"
+		},
+		"1fa9b": {
+			"name": "screwdriver"
+		},
+		"1f529": {
+			"name": "nut and bolt"
+		},
+		"1f5dc": {
+			"name": "clamp"
+		},
+		"1f9af": {
+			"name": "white cane"
+		},
+		"1f517": {
+			"name": "link"
+		},
+		"26d3": {
+			"name": "chains"
+		},
+		"1fa9d": {
+			"name": "hook"
+		},
+		"1f9f0": {
+			"name": "toolbox"
+		},
+		"1f9f2": {
+			"name": "magnet"
+		},
+		"1fa9c": {
+			"name": "ladder"
+		},
+		"1f489": {
+			"name": "syringe"
+		},
+		"1fa78": {
+			"name": "drop of blood"
+		},
+		"1f48a": {
+			"name": "pill"
+		},
+		"1fa79": {
+			"name": "adhesive bandage"
+		},
+		"1fa7a": {
+			"name": "stethoscope"
+		},
+		"1f6aa": {
+			"name": "door"
+		},
+		"1f6d7": {
+			"name": "elevator"
+		},
+		"1f6cf": {
+			"name": "bed"
+		},
+		"1f6cb": {
+			"name": "couch and lamp"
+		},
+		"1fa91": {
+			"name": "chair"
+		},
+		"1f6bd": {
+			"name": "toilet"
+		},
+		"1faa0": {
+			"name": "plunger"
+		},
+		"1f6bf": {
+			"name": "shower"
+		},
+		"1f6c1": {
+			"name": "bathtub"
+		},
+		"1fa92": {
+			"name": "razor"
+		},
+		"1f9f4": {
+			"name": "lotion bottle"
+		},
+		"1f9f7": {
+			"name": "safety pin"
+		},
+		"1f9f9": {
+			"name": "broom"
+		},
+		"1f9fa": {
+			"name": "basket"
+		},
+		"1f9fb": {
+			"name": "roll of paper"
+		},
+		"1faa3": {
+			"name": "bucket"
+		},
+		"1f9fc": {
+			"name": "soap"
+		},
+		"1faa5": {
+			"name": "toothbrush"
+		},
+		"1f9fd": {
+			"name": "sponge"
+		},
+		"1f9ef": {
+			"name": "fire extinguisher"
+		},
+		"1f6d2": {
+			"name": "shopping cart"
+		},
+		"1f6ac": {
+			"name": "cigarette"
+		},
+		"26b0": {
+			"name": "coffin"
+		},
+		"26b1": {
+			"name": "funeral urn"
+		},
+		"1f5ff": {
+			"name": "moai"
+		},
+		"1faa7": {
+			"name": "placard"
+		},
+		"231b": {
+			"name": "hourglass done"
+		},
+		"23f3": {
+			"name": "hourglass not done"
+		},
+		"231a": {
+			"name": "watch"
+		},
+		"23f0": {
+			"name": "alarm clock"
+		},
+		"23f1": {
+			"name": "stopwatch"
+		},
+		"23f2": {
+			"name": "timer clock"
+		},
+		"1f570": {
+			"name": "mantelpiece clock"
 		}
 	}
 }
