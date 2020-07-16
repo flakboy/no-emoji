@@ -1086,15 +1086,6 @@
 		"1f93a": {
 			"name": "person fencing"
 		},
-		"1f3cc": {
-			"name": "person golfing"
-		},
-		"1f3cc_fe0f_200d_2642_fe0f": {
-			"name": "man golfing"
-		},
-		"1f3cc_fe0f_200d_2640_fe0f": {
-			"name": "woman golfing"
-		},
 		"1f3c4": {
 			"name": "person surfing"
 		},
@@ -1103,60 +1094,6 @@
 		},
 		"1f3c4_200d_2640_fe0f": {
 			"name": "woman surfing"
-		},
-		"1f6a3": {
-			"name": "person rowing boat"
-		},
-		"1f6a3_200d_2642_fe0f": {
-			"name": "man rowing boat"
-		},
-		"1f6a3_200d_2640_fe0f": {
-			"name": "woman rowing boat"
-		},
-		"1f3ca": {
-			"name": "person swimming"
-		},
-		"1f3ca_200d_2642_fe0f": {
-			"name": "man swimming"
-		},
-		"1f3ca_200d_2640_fe0f": {
-			"name": "woman swimming"
-		},
-		"26f9": {
-			"name": "person bouncing ball"
-		},
-		"26f9_fe0f_200d_2642_fe0f": {
-			"name": "man bouncing ball"
-		},
-		"26f9_fe0f_200d_2640_fe0f": {
-			"name": "woman bouncing ball"
-		},
-		"1f3cb": {
-			"name": "person lifting weights"
-		},
-		"1f3cb_fe0f_200d_2642_fe0f": {
-			"name": "man lifting weights"
-		},
-		"1f3cb_fe0f_200d_2640_fe0f": {
-			"name": "woman lifting weights"
-		},
-		"1f6b4": {
-			"name": "person biking"
-		},
-		"1f6b4_200d_2642_fe0f": {
-			"name": "man biking"
-		},
-		"1f6b4_200d_2640_fe0f": {
-			"name": "woman biking"
-		},
-		"1f6b5": {
-			"name": "person mountain biking"
-		},
-		"1f6b5_200d_2642_fe0f": {
-			"name": "man mountain biking"
-		},
-		"1f6b5_200d_2640_fe0f": {
-			"name": "woman mountain biking"
 		},
 		"1f938": {
 			"name": "person cartwheeling"
@@ -1478,14 +1415,41 @@
 		},
 		"1f48d": {
 			"name": "ring"
+		},
+		"1f302": {
+			"name": "closed umbrella"
 		}
 	},
 	"nature": {
 		"1f980": {
 			"name": "crab"
 		},
+		"1f383": {
+			"name": "jack-o-lantern"
+		},
+		"1f31a": {
+			"name": "new moon face"
+		},
+		"1f31b": {
+			"name": "first quarter moon face"
+		},
+		"1f31c": {
+			"name": "last quarter moon face"
+		},
+		"1f31d": {
+			"name": "full moon face"
+		},
+		"1f31e": {
+			"name": "sun with face"
+		},
+		"1f344": {
+			"name": "mushroom"
+		},
 		"1f311": {
 			"name": "new moon"
+		},
+		"1f330": {
+			"name": "chestnut"
 		},
 		"1f312": {
 			"name": "waxing crescent moon"
@@ -1636,6 +1600,15 @@
 		},
 		"1f992": {
 			"name": "giraffe"
+		},
+		"1f384": {
+			"name": "Christmas tree"
+		},
+		"1f38d": {
+			"name": "pine decoration"
+		},
+		"1f38b": {
+			"name": "tanabata tree"
 		},
 		"1f418": {
 			"name": "elephant"
@@ -1850,12 +1823,6 @@
 		"1f338": {
 			"name": "cherry blossom"
 		},
-		"1f4ae": {
-			"name": "white flower"
-		},
-		"1f3f5": {
-			"name": "rosette"
-		},
 		"1f339": {
 			"name": "rose"
 		},
@@ -1921,6 +1888,84 @@
 		},
 		"1f310": {
 			"name": "globe with meridians"
+		},
+		"2600": {
+			"name": "sun"
+		},
+		"2601": {
+			"name": "cloud"
+		},
+		"2603": {
+			"name": "snowman"
+		},
+		"2604": {
+			"name": "comet"
+		},
+		"2614": {
+			"name": "umbrella with rain drops"
+		},
+		"2744": {
+			"name": "snowflake"
+		},
+		"2b50": {
+			"name": "star"
+		},
+		"1f31f": {
+			"name": "glowing star"
+		},
+		"1f320": {
+			"name": "shooting star"
+		},
+		"26c5": {
+			"name": "sun behind cloud"
+		},
+		"26c8": {
+			"name": "cloud with lightning and rain"
+		},
+		"1f324": {
+			"name": "sun behind small cloud"
+		},
+		"1f325": {
+			"name": "sun behind large cloud"
+		},
+		"1f326": {
+			"name": "sun behind rain cloud"
+		},
+		"1f327": {
+			"name": "cloud with rain"
+		},
+		"1f328": {
+			"name": "cloud with snow"
+		},
+		"1f329": {
+			"name": "cloud with lightning"
+		},
+		"1f32a": {
+			"name": "tornado"
+		},
+		"1f32b": {
+			"name": "fog"
+		},
+		"1f32c": {
+			"name": "wind face"
+		},
+		"1f300": {
+			"name": "cyclone"
+		},
+		"26a1": {
+			"name": "high voltage"
+		},
+		"26c4": {
+			"name": "snowman without snow"
+		},
+		"1f525": {
+			"name": "fire"
+		},
+		"1f4a7": {
+			"name": "droplet"
+		},
+		"1f30a": {
+			"name": "water wave"
 		}
 	},
 	"food": {
@@ -2017,14 +2062,8 @@
 		"1f9c5": {
 			"name": "onion"
 		},
-		"1f344": {
-			"name": "mushroom"
-		},
 		"1f95c": {
 			"name": "peanuts"
-		},
-		"1f330": {
-			"name": "chestnut"
 		},
 		"1f35e": {
 			"name": "bread"
@@ -3982,17 +4021,20 @@
 		}
 	},
 	"activities": {
-		"1f397": {
-			"name": "reminder ribbon"
+		"1f3a4": {
+			"name": "microphone"
+		},
+		"1f3f5": {
+			"name": "rosette"
 		},
 		"1f3a7": {
 			"name": "headphone"
 		},
+		"1f397": {
+			"name": "reminder ribbon"
+		},
 		"1f3f9": {
 			"name": "bow and arrow"
-		},
-		"1f3a4": {
-			"name": "microphone"
 		},
 		"1f3c2": {
 			"name": "snowboarder"
@@ -4159,6 +4201,15 @@
 		"1f3ab": {
 			"name": "ticket"
 		},
+		"1f3cc": {
+			"name": "person golfing"
+		},
+		"1f3cc_fe0f_200d_2642_fe0f": {
+			"name": "man golfing"
+		},
+		"1f3cc_fe0f_200d_2640_fe0f": {
+			"name": "woman golfing"
+		},
 		"1f3b7": {
 			"name": "saxophone"
 		},
@@ -4171,9 +4222,6 @@
 		"1f3bc": {
 			"name": "musical score"
 		},
-		"1f3f5": {
-			"name": "rosette"
-		},
 		"1f3ba": {
 			"name": "trumpet"
 		},
@@ -4185,6 +4233,60 @@
 		},
 		"1f574": {
 			"name": "person in suit levitating"
+		},
+		"1f6a3": {
+			"name": "person rowing boat"
+		},
+		"1f6a3_200d_2642_fe0f": {
+			"name": "man rowing boat"
+		},
+		"1f6a3_200d_2640_fe0f": {
+			"name": "woman rowing boat"
+		},
+		"1f3ca": {
+			"name": "person swimming"
+		},
+		"1f3ca_200d_2642_fe0f": {
+			"name": "man swimming"
+		},
+		"1f3ca_200d_2640_fe0f": {
+			"name": "woman swimming"
+		},
+		"26f9": {
+			"name": "person bouncing ball"
+		},
+		"26f9_fe0f_200d_2642_fe0f": {
+			"name": "man bouncing ball"
+		},
+		"26f9_fe0f_200d_2640_fe0f": {
+			"name": "woman bouncing ball"
+		},
+		"1f3cb": {
+			"name": "person lifting weights"
+		},
+		"1f3cb_fe0f_200d_2642_fe0f": {
+			"name": "man lifting weights"
+		},
+		"1f3cb_fe0f_200d_2640_fe0f": {
+			"name": "woman lifting weights"
+		},
+		"1f6b4": {
+			"name": "person biking"
+		},
+		"1f6b4_200d_2642_fe0f": {
+			"name": "man biking"
+		},
+		"1f6b4_200d_2640_fe0f": {
+			"name": "woman biking"
+		},
+		"1f6b5": {
+			"name": "person mountain biking"
+		},
+		"1f6b5_200d_2642_fe0f": {
+			"name": "man mountain biking"
+		},
+		"1f6b5_200d_2640_fe0f": {
+			"name": "woman mountain biking"
 		}
 	},
 	"travel": {
@@ -4591,6 +4693,9 @@
 		},
 		"1f579": {
 			"name": "joystick"
+		},
+		"1f4ae": {
+			"name": "white flower"
 		},
 		"1f6a9": {
 			"name": "triangular flag"

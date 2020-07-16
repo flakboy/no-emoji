@@ -2,7 +2,7 @@ let actionSelect = document.getElementById("action"),
 	url = document.getElementById("url");
 
 let xhr = new XMLHttpRequest();
-xhr.addEventListener("readystatechange", () => {
+xhr.onreadystatechange = () => {
 	if (xhr.readyState === 4) {
 		let emojiInfo = JSON.parse(xhr.response);
 		let section = document.getElementById("settings__selected-emoji");
@@ -12,22 +12,23 @@ xhr.addEventListener("readystatechange", () => {
 			categoryWrapper.classList.add("category__wrapper");
 			categoryWrapper.id = "wrapper-" + category;
 
-			let categoryTable = document.createElement("div"),
-				categoryTitle = document.createElement("h3");
-			categoryTable.classList.add("emoji-list")
+			let categoryTitle = document.createElement("h3");
 
 			categoryTitle.textContent = category;
 			categoryTitle.classList.add("category__title");
 			categoryTitle.addEventListener("click", function () {
-
-				if (categoryWrapper.style.height == "0px" || categoryWrapper.style.height == "")
+				if (categoryWrapper.style.height === "0px" || categoryWrapper.style.height == "")
 					categoryWrapper.style.height = `${categoryWrapper.scrollHeight}px`;
 				else
 					categoryWrapper.style.height = "0px";
-
-				console.log(categoryWrapper.style.height)
 			});
 
+			let btSelectAll = document.createElement("button");
+			btSelectAll.textContent = "Select/Deselect all";
+			categoryWrapper.appendChild(btSelectAll);
+
+			let categoryTable = document.createElement("div");
+			categoryTable.classList.add("emoji-list");
 			categoryWrapper.appendChild(categoryTable);
 
 			for (let [key, value] of Object.entries(emojiInfo[category])) {
@@ -52,9 +53,9 @@ xhr.addEventListener("readystatechange", () => {
 				tdName.classList.add("emoji-list__name")
 				categoryCell.appendChild(tdName);
 
-
 				let tdCheckbox = document.createElement("div"),
 					checkbox = document.createElement("input");
+
 				checkbox.type = "checkbox";
 				checkbox.name = "emoji[]";
 				checkbox.value = key;
@@ -63,11 +64,26 @@ xhr.addEventListener("readystatechange", () => {
 
 				categoryTable.appendChild(categoryCell);
 			}
+
+			btSelectAll.onclick = () => {
+				let allSelected = true;
+				for (let div of categoryTable.childNodes) {
+					if (!div.childNodes[2].childNodes[0].checked) {
+						allSelected = false;
+						break;
+					}
+				}
+				for (let div of categoryTable.childNodes) {
+					div.childNodes[2].childNodes[0].checked = !allSelected;
+				}
+			}
+
 			section.appendChild(categoryTitle);
 			section.appendChild(categoryWrapper);
 		}
 	}
-});
+}
+
 xhr.open("GET", chrome.extension.getURL("/emoji_db.json"), true);
 xhr.send();
 
@@ -83,30 +99,69 @@ chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
 	switch (actionType) {
 		case "hide":
 			document.getElementById("url").disabled = true;
+			document.getElementById("file").disabled = true;
 			break;
 		case "url":
 			document.getElementById("url").disabled = false;
+			document.getElementById("file").disabled = true;
+			break;
+		case "upload":
+			document.getElementById("url").disabled = true;
+			document.getElementById("file").disabled = false;
+			break;
 	}
 })
 
 actionSelect.addEventListener("change", () => {
 	let selectedValue = actionSelect.value;
-	let options = actionSelect.children;
 
 	switch (selectedValue) {
 		case "hide":
 			document.getElementById("url").disabled = true;
+			document.getElementById("file").disabled = true;
 			actionType = "hide"
 			break;
 		case "url":
 			document.getElementById("url").disabled = false;
+			document.getElementById("file").disabled = true;
 			actionType = "url";
+			break;
+		case "upload":
+			document.getElementById("url").disabled = true;
+			document.getElementById("file").disabled = false;
+			actionType = "upload";
 			break;
 	}
 })
 
+let inputFile = document.getElementById("file");
+let inputFileData;
+let canvas = document.getElementById("file-compress");
+let ctx = canvas.getContext("2d");
+
+inputFile.onchange = () => {
+	let fileReader = new FileReader();
+	fileReader.onloadend = () => {
+		inputFileData = fileReader.result;
+		if (inputFileData.match(/^data\:image\/(jpeg|png)/) != null) {
+			let img = new Image();
+			img.onload = () => {
+				let drawHeight = (img.width > img.height) ? 120 : img.height * 120 / img.width;
+				let drawWidth = (img.height > img.width) ? 120 : img.width * 120 / img.height;
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				ctx.drawImage(img, 0, 0, drawWidth, drawHeight);
+			}
+			img.src = inputFileData;
+		} else {
+			inputFile.value = "";
+		}
+	}
+	fileReader.readAsDataURL(inputFile.files[0]);
+}
+
+
 document.getElementById("settings__action").onsubmit = () => {
-	if (!url.disabled) {
+	if (actionType === url) {
 		if (url.value.length) {
 			chrome.storage.local.set({
 				action: actionType,
@@ -116,13 +171,27 @@ document.getElementById("settings__action").onsubmit = () => {
 			});
 		} else {
 			alert('Pole "Adres URL" nie może być puste');
-			return false;
+		}
+	} else if (actionType === "upload") {
+		if (inputFile.value) {
+			let imageData;
+			if (inputFileData.startsWith("data:image/jpeg")) {
+				imageData = ctx.canvas.toDataURL("image/jpeg", 0.9);
+			} else if (inputFileData.startsWith("data:image/png")) {
+				imageData = ctx.canvas.toDataURL();
+			}
+			chrome.storage.local.set({
+				action: actionType,
+				uploadedImage: imageData,
+			});
 		}
 	} else {
 		chrome.storage.local.set({ action: actionType }, () => {
-			alert("Twoje ustawienia zostały pomyślnie zapisane")
+			console.log("Twoje ustawienia zostały pomyślnie zapisane")
 		});
 	}
+
+	return false;
 }
 
 document.getElementById("settings__selected-emoji").onsubmit = () => {
@@ -131,11 +200,8 @@ document.getElementById("settings__selected-emoji").onsubmit = () => {
 	for (let checkbox of checkboxes) {
 		if (checkbox.checked) {
 			filtered.push(checkbox.value)
-		} else {
-
 		}
 	}
 	chrome.storage.local.set({ filtered: filtered });
-	// document.body.innerHTML = JSON.stringify(filtered)
 	return false;
 }
