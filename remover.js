@@ -1,4 +1,9 @@
-const queries = ["img._1ift", "span._6qdm", "span._21wj"]
+const classQueries = [
+	//Old Facebook UI
+	"_1ift", "_6qdm", "_21wj",
+	//New Facebook UI
+	"tbxw36s4", "_5zft", "_3gl1"
+]
 
 chrome.storage.local.get({
 	action: "hide",
@@ -7,66 +12,49 @@ chrome.storage.local.get({
 	uploadedImage: null
 }, result => {
 	settings = result;
-	MutationObserver = window.MutationObserver || window.WebKitMutationObserver
+	MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+	if (settings.action === "url") {
+		let removerStylesheet = document.createElement("style");
+		document.head.appendChild(removerStylesheet);
+		removerStylesheet.sheet.insertRule(`.emoji__replaced { background-image: url('${settings.imgUrl}') !important }`);
+	} else if (settings.action === "upload") {
+		let removerStylesheet = document.createElement("style");
+		document.head.appendChild(removerStylesheet);
+		removerStylesheet.sheet.insertRule(`.emoji__replaced { background-image: url('${settings.uploadedImage}') !important }`);
+	}
+
 	monitor = new MutationObserver((mutations, observer) => {
-		let emojis = [];
-		for (query of queries) {
-			queryResult = document.querySelectorAll(query);
-			emojis.push(...queryResult);
+		let emojiElements = [];
+		for (let query of classQueries) {
+			let queryResult = document.getElementsByClassName(query);
+			emojiElements.push(...queryResult);
 		}
 
 		if (settings.action === "url") {
-			for (elem of emojis) {
-				// if (elem.tagName === "IMG") {
-				// 	let charUnicode = elem.src.split("/");
-				// 	charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-				// 	if (settings.filtered.includes(charUnicode)) {
-				// 		elem.src = settings.imgUrl;
-				// 	}
-				// } else {
-				// 	let charUnicode = elem.style.backgroundImage.split("/");
-				// 	charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-				// 	if (settings.filtered.includes(charUnicode)) {
-				// 		elem.style.backgroundImage = 'url("' + settings.imgUrl + '")';
-				// 		elem.style.backgroundPosition = "center";
-				// 		elem.style.backgroundSize = "100%";
-				// 	}
-				// }
+			for (let elem of emojiElements) {
 				replaceEmoji(elem, settings.imgUrl);
 			}
 		} else if (settings.action === "upload") {
-			for (elem of emojis) {
-				// if (elem.tagName === "IMG") {
-				// 	let charUnicode = elem.src.split("/");
-				// 	charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-
-				// 	if (settings.filtered.includes(charUnicode)) {
-				// 		elem.src = settings.uploadedImage;
-				// 	}
-				// } else {
-				// 	let charUnicode = elem.style.backgroundImage.split("/");
-				// 	charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-				// 	if (settings.filtered.includes(charUnicode)) {
-				// 		elem.style.backgroundImage = 'url("' + settings.uploadedImage + '")';
-				// 		elem.style.backgroundPosition = "center";
-				// 		elem.style.backgroundSize = "100%";
-				// 	}
-				// }
+			for (let elem of emojiElements) {
 				replaceEmoji(elem, settings.uploadedImage);
 			}
 		} else if (settings.action === "hide") {
-			for (elem of emojis) {
+			for (let elem of emojiElements) {
 				if (elem.tagName === "IMG") {
 					let charUnicode = elem.src.split("/");
+
+					//sprawdzić, czy bardziej wydajne jest rozbijanie stringa w jednej linii, czy też kawałek po kawałku
 					charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
+
 					if (settings.filtered.includes(charUnicode)) {
-						elem.style.display = "none";
+						elem.classList.add("emoji__hidden")
 					}
-				} else {
+				} else if (elem.tagName === "SPAN") {
 					let charUnicode = elem.style.backgroundImage.split("/");
 					charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
 					if (settings.filtered.includes(charUnicode)) {
-						elem.style.display = "none";
+						elem.classList.add("emoji__hidden")
 					}
 				}
 			}
@@ -76,7 +64,6 @@ chrome.storage.local.get({
 
 	monitor.observe(document, {
 		subtree: true,
-		// attributes: true,
 		childList: true
 	});
 })
@@ -85,17 +72,24 @@ function replaceEmoji(node, image) {
 	if (node.tagName === "IMG") {
 		let charUnicode = node.src.split("/");
 		charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-
 		if (settings.filtered.includes(charUnicode)) {
-			elem.src = image;
+			node.src = image;
 		}
 	} else if (node.tagName === "SPAN") {
-		let charUnicode = node.style.backgroundImage.split("/");
-		charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-		if (settings.filtered.includes(charUnicode)) {
-			node.style.backgroundImage = 'url("' + image + '")';
-			node.style.backgroundPosition = "center";
-			node.style.backgroundSize = "100%";
+		//for new version of Facebook UI
+		if (node.classList.contains("tbxw36s4")) {
+			let elem = node.children[0];
+			let charUnicode = elem.src.split("/");
+			charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
+			if (settings.filtered.includes(charUnicode)) {
+				elem.src = image;
+			}
+		} else { //works with old and new UI (except for .tbxw36s4)
+			let charUnicode = node.style.backgroundImage.split("/");
+			charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
+			if (settings.filtered.includes(charUnicode)) {
+				node.classList.add("emoji__replaced");
+			}
 		}
 	}
 }

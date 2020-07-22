@@ -1,0 +1,8 @@
+.emoji__hidden {
+    display: none !important;
+}
+
+.emoji__replaced {
+    background-position: center;
+    background-size: 100%;
+}
