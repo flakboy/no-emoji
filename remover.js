@@ -1,9 +1,11 @@
-const classQueries = [
-	//Old Facebook UI
-	"_1ift", "_6qdm", "_21wj",
-	//New Facebook UI
-	"tbxw36s4", "_5zft", "_3gl1"
-]
+// const classQueries = [
+//Old Facebook UI
+// "_1ift", "_6qdm", "_21wj",
+//New Facebook UI
+// "tbxw36s4", "_5zft", "_3gl1"
+// ];
+
+const MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 chrome.storage.local.get({
 	action: "hide",
@@ -12,7 +14,6 @@ chrome.storage.local.get({
 	uploadedImage: null
 }, result => {
 	settings = result;
-	MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 
 	if (settings.action === "url") {
 		let removerStylesheet = document.createElement("style");
@@ -24,49 +25,46 @@ chrome.storage.local.get({
 		removerStylesheet.sheet.insertRule(`.emoji__replaced { background-image: url('${settings.uploadedImage}') !important }`);
 	}
 
-	monitor = new MutationObserver((mutations, observer) => {
-		let emojiElements = [];
-		for (let query of classQueries) {
-			let queryResult = document.getElementsByClassName(query);
-			emojiElements.push(...queryResult);
-		}
-
-		if (settings.action === "url") {
-			for (let elem of emojiElements) {
-				replaceEmoji(elem, settings.imgUrl);
-			}
-		} else if (settings.action === "upload") {
-			for (let elem of emojiElements) {
-				replaceEmoji(elem, settings.uploadedImage);
-			}
-		} else if (settings.action === "hide") {
-			for (let elem of emojiElements) {
-				if (elem.tagName === "IMG") {
-					let charUnicode = elem.src.split("/");
-
-					//sprawdzić, czy bardziej wydajne jest rozbijanie stringa w jednej linii, czy też kawałek po kawałku
-					charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-
-					if (settings.filtered.includes(charUnicode)) {
-						elem.classList.add("emoji__hidden")
-					}
-				} else if (elem.tagName === "SPAN") {
-					let charUnicode = elem.style.backgroundImage.split("/");
-					charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
-					if (settings.filtered.includes(charUnicode)) {
-						elem.classList.add("emoji__hidden")
-					}
-				}
-			}
-		}
-
-	});
+	const monitor = new MutationObserver(getEmoji);
 
 	monitor.observe(document, {
 		subtree: true,
 		childList: true
 	});
 })
+
+function getEmoji() {
+	let emojiElements = document.body.querySelectorAll(".tbxw36s4, ._5zft, ._3gl1");
+
+	if (settings.action === "url") {
+		for (let elem of emojiElements) {
+			replaceEmoji(elem, settings.imgUrl);
+		}
+	} else if (settings.action === "upload") {
+		for (let elem of emojiElements) {
+			replaceEmoji(elem, settings.uploadedImage);
+		}
+	} else if (settings.action === "hide") {
+		for (let elem of emojiElements) {
+			if (elem.tagName === "IMG") {
+				let charUnicode = elem.src.split("/");
+
+				//sprawdzić, czy bardziej wydajne jest rozbijanie stringa w jednej linii, czy też kawałek po kawałku
+				charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
+
+				if (settings.filtered.includes(charUnicode)) {
+					elem.classList.add("emoji__hidden");
+				}
+			} else if (elem.tagName === "SPAN") {
+				let charUnicode = elem.style.backgroundImage.split("/");
+				charUnicode = charUnicode[charUnicode.length - 1].split(".")[0];
+				if (settings.filtered.includes(charUnicode)) {
+					elem.classList.add("emoji__hidden");
+				}
+			}
+		}
+	}
+}
 
 function replaceEmoji(node, image) {
 	if (node.tagName === "IMG") {

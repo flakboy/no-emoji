@@ -1,91 +1,90 @@
 let actionSelect = document.getElementById("action"),
 	url = document.getElementById("url");
 
-let xhr = new XMLHttpRequest();
-xhr.onreadystatechange = () => {
-	if (xhr.readyState === 4) {
-		let emojiInfo = JSON.parse(xhr.response);
-		let section = document.getElementById("settings__selected-emoji");
+(async () => {
+	let emojiInfo;
+	await fetch(chrome.extension.getURL("/emoji_db.json"))
+		.then(res => res.json())
+		.then(res => emojiInfo = res);
 
-		for (let category of Object.keys(emojiInfo)) {
-			let categoryWrapper = document.createElement("div")
-			categoryWrapper.classList.add("category__wrapper");
-			categoryWrapper.id = "wrapper-" + category;
+	let section = document.getElementById("settings__selected-emoji");
 
-			let categoryTitle = document.createElement("h3");
+	for (let category of Object.keys(emojiInfo)) {
+		let categoryWrapper = document.createElement("div")
+		categoryWrapper.classList.add("category__wrapper");
+		categoryWrapper.id = "wrapper-" + category;
 
-			categoryTitle.textContent = category;
-			categoryTitle.classList.add("category__title");
-			categoryTitle.addEventListener("click", function () {
-				if (categoryWrapper.style.height === "0px" || categoryWrapper.style.height == "")
-					categoryWrapper.style.height = `${categoryWrapper.scrollHeight}px`;
-				else
-					categoryWrapper.style.height = "0px";
-			});
+		let categoryTitle = document.createElement("h3");
 
-			let btSelectAll = document.createElement("button");
-			btSelectAll.textContent = "Select/Deselect all";
-			categoryWrapper.appendChild(btSelectAll);
+		categoryTitle.textContent = category;
+		categoryTitle.classList.add("category__title");
+		categoryTitle.addEventListener("click", () => {
+			if (categoryWrapper.style.height === "0px" || categoryWrapper.style.height === "")
+				categoryWrapper.style.height = `${categoryWrapper.scrollHeight}px`;
+			else
+				categoryWrapper.style.height = "0px";
+		});
 
-			let categoryTable = document.createElement("div");
-			categoryTable.classList.add("emoji-list");
-			categoryWrapper.appendChild(categoryTable);
+		let btSelectAll = document.createElement("button");
+		btSelectAll.textContent = "Select/Deselect all";
+		categoryWrapper.appendChild(btSelectAll);
 
-			for (let [key, value] of Object.entries(emojiInfo[category])) {
-				let categoryCell = document.createElement("div");
-				categoryCell.classList.add("emoji-list__cell");
+		let categoryTable = document.createElement("div");
+		categoryTable.classList.add("emoji-list");
+		categoryWrapper.appendChild(categoryTable);
 
-				let tdPreview = document.createElement("div");
-				let emojiSurrogates = key.split("_")
-				if (emojiSurrogates.length === 1) {
-					tdPreview.textContent = String.fromCodePoint(parseInt(key, 16));
-				} else {
-					tdPreview.textContent += emojiSurrogates.map(char => {
-						return String.fromCodePoint(parseInt(char, 16))
-					}).join("");
-				}
+		for (let [key, value] of Object.entries(emojiInfo[category])) {
+			let categoryCell = document.createElement("div");
+			categoryCell.classList.add("emoji-list__cell");
 
-				tdPreview.classList.add("emoji-list__icon");
-				categoryCell.appendChild(tdPreview);
-
-				let tdName = document.createElement("div");
-				tdName.textContent = value.name;
-				tdName.classList.add("emoji-list__name")
-				categoryCell.appendChild(tdName);
-
-				let tdCheckbox = document.createElement("div"),
-					checkbox = document.createElement("input");
-
-				checkbox.type = "checkbox";
-				checkbox.name = "emoji[]";
-				checkbox.value = key;
-				tdCheckbox.appendChild(checkbox);
-				categoryCell.appendChild(tdCheckbox);
-
-				categoryTable.appendChild(categoryCell);
+			let tdPreview = document.createElement("div");
+			let emojiSurrogates = key.split("_")
+			if (emojiSurrogates.length === 1) {
+				tdPreview.textContent = String.fromCodePoint(parseInt(key, 16));
+			} else {
+				tdPreview.textContent += emojiSurrogates.map(char => {
+					return String.fromCodePoint(parseInt(char, 16))
+				}).join("");
 			}
 
-			btSelectAll.onclick = () => {
-				let allSelected = true;
-				for (let div of categoryTable.childNodes) {
-					if (!div.childNodes[2].childNodes[0].checked) {
-						allSelected = false;
-						break;
-					}
-				}
-				for (let div of categoryTable.childNodes) {
-					div.childNodes[2].childNodes[0].checked = !allSelected;
-				}
-			}
+			tdPreview.classList.add("emoji-list__icon");
+			categoryCell.appendChild(tdPreview);
 
-			section.appendChild(categoryTitle);
-			section.appendChild(categoryWrapper);
+			let tdName = document.createElement("div");
+			tdName.textContent = value.name;
+			tdName.classList.add("emoji-list__name")
+			categoryCell.appendChild(tdName);
+
+			// let tdCheckbox = document.createElement("div")
+			let checkbox = document.createElement("input");
+
+			checkbox.type = "checkbox";
+			checkbox.name = "emoji[]";
+			checkbox.value = key;
+			// tdCheckbox.appendChild(checkbox);
+			// categoryCell.appendChild(tdCheckbox);
+			categoryCell.appendChild(checkbox);
+
+			categoryTable.appendChild(categoryCell);
 		}
-	}
-}
 
-xhr.open("GET", chrome.extension.getURL("/emoji_db.json"), true);
-xhr.send();
+		btSelectAll.onclick = () => {
+			let allSelected = true;
+			for (let div of categoryTable.childNodes) {
+				if (!div.querySelector("input[type=checkbox]").checked) {
+					allSelected = false;
+					break;
+				}
+			}
+			for (let div of categoryTable.childNodes) {
+				div.querySelector("input[type=checkbox]").checked = !allSelected;
+			}
+		}
+
+		section.appendChild(categoryTitle);
+		section.appendChild(categoryWrapper);
+	}
+})();
 
 chrome.storage.local.get({ action: "hide", imgUrl: "" }, data => {
 	actionType = data.action;
@@ -143,7 +142,7 @@ inputFile.onchange = () => {
 	let fileReader = new FileReader();
 	fileReader.onloadend = () => {
 		inputFileData = fileReader.result;
-		if (inputFileData.match(/^data\:image\/(jpeg|png)/) != null) {
+		if (inputFileData.match(/^data:image\/(jpeg|png|webp)/) != null) {
 			let img = new Image();
 			img.onload = () => {
 				let drawHeight = (img.width > img.height) ? 120 : img.height * 120 / img.width;
@@ -175,10 +174,10 @@ document.getElementById("settings__action").onsubmit = () => {
 	} else if (actionType === "upload") {
 		if (inputFile.value) {
 			let imageData;
-			if (inputFileData.startsWith("data:image/jpeg")) {
-				imageData = ctx.canvas.toDataURL("image/jpeg", 0.9);
-			} else if (inputFileData.startsWith("data:image/png")) {
+			if (inputFileData.match(/^data:image\/(png|webp)/)) {
 				imageData = ctx.canvas.toDataURL();
+			} else /*if (inputFileData.startsWith("data:image/jpeg"))*/ {
+				imageData = ctx.canvas.toDataURL("image/jpeg", 0.9);
 			}
 			chrome.storage.local.set({
 				action: actionType,
@@ -190,7 +189,6 @@ document.getElementById("settings__action").onsubmit = () => {
 			console.log("Twoje ustawienia zostały pomyślnie zapisane")
 		});
 	}
-
 	return false;
 }
 
